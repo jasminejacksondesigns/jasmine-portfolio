@@ -1,0 +1,61 @@
+export const site = {
+  name: "Jasmine Jackson",
+  role: "Product Designer",
+  heroBlurb:
+    "I'm a product designer who roots my ideas in user needs and grows thoughtful, impactful experiences.",
+  about: {
+    headshot: "/about/garden/headshot-v2.png",
+    heading: "Welcome to my garden!",
+    paragraphs: [
+      "Jasmine Jackson San Francisco–based Product Designer specializing in interactive systems, conversational AI, and end-to-end user experiences. With a background spanning enterprise platforms and rapid prototyping, I bridge the gap between complex technical infrastructure and intuitive, human-centered design.",
+      "My approach combines systemic rigor with creative exploration. Whether engineering scalable design patterns, building live contextual prototypes with modern AI tools, or experimenting with digital and tactile media, I focus on crafting interfaces that feel seamless, expressive, and purposeful.",
+      "When I'm not designing screens, I'm usually building diy home decor, going on hikes practicing yoga, or training for my next half marathon around the Bay Area.",
+    ],
+    photos: [
+      { src: "/about/garden/img-0022.jpg", aspect: 412 / 412 },
+      { src: "/about/garden/img-5118.jpg", aspect: 413 / 474 },
+      { src: "/about/garden/img-8668.jpg", aspect: 412 / 427 },
+      { src: "/about/garden/img-5480.jpg", aspect: 412 / 437 },
+      { src: "/about/garden/img-5432.jpg", aspect: 398 / 531 },
+      { src: "/about/garden/img-2957.jpg", aspect: 398 / 530 },
+      { src: "/about/garden/img-4648.jpg", aspect: 394 / 430 },
+      { src: "/about/garden/img-6542.jpg", aspect: 396 / 267 },
+      { src: "/about/garden/img-4868.jpg", aspect: 349 / 466 },
+      { src: "/about/garden/img-5047.jpg", aspect: 348 / 348 },
+      { src: "/about/garden/img-0034.jpg", aspect: 349 / 465 },
+      { src: "/about/garden/img-4924.jpg", aspect: 353 / 471 },
+    ],
+  },
+  experience: {
+    label: "My experience",
+    heading: "My past experience including full-time, leadership, and internships",
+    items: [
+      { name: "QuickBooks", role: "Product Designer II", icon: "/home/experience/quickbooks.png", rounded: false },
+      { name: "Intuit", role: "Associate Product Manager", icon: "/home/experience/intuit.png", rounded: true },
+      { name: "Target", role: "Marketing Intern", icon: "/home/experience/target.png", rounded: true },
+      { name: "Design U", role: "Digital Consultant, VP of Events", icon: "/home/experience/design-u.png", rounded: true },
+      { name: "Obvi Design", role: "Design Research Intern", icon: "/home/experience/obvi-design.gif", rounded: true },
+      { name: "Carlson School of Management", role: "Graphic Designer", icon: "/home/experience/carlson.jpg", rounded: true },
+    ],
+  },
+  tools: {
+    label: "Tools I use",
+    heading: "Click to see what I do with them",
+    items: [
+      { name: "Figma", icon: "/home/tools/figma.svg", bg: "#ffffff", text: "#000000" },
+      { name: "ChatGPT", icon: "/home/tools/chatgpt.svg", bg: "#d97736", text: "#2b1204" },
+      { name: "Claude Code", icon: "/home/tools/claude-code.svg", bg: "#d4c5b9", text: "#3d2d24" },
+      { name: "Framer", icon: "/home/tools/framer.svg", bg: "#1f69ff", text: "#ffffff" },
+      { name: "Cursor", icon: "/home/tools/cursor.svg", bg: "#fad1d1", text: "#2a1616" },
+      { name: "Render", icon: "/home/tools/render.svg", bg: "#49a8b0", text: "#112e31" },
+      { name: "Supabase", icon: "/home/tools/supabase.svg", bg: "#e2c14d", text: "#1c1704" },
+      { name: "GitHub", icon: "/home/tools/github.svg", bg: "#d6c4f0", text: "#22123b" },
+    ],
+  },
+  contact: {
+    email: "jasminejackson.designs@gmail.com",
+    resumeHref: "/resume/jasmine-jackson-resume-2026.pdf",
+    linkedin: "https://www.linkedin.com/in/jasminejackson19/",
+    instagram: { handle: "@allthatdesigns", href: "https://www.instagram.com/allthatdesigns/" },
+  },
+};

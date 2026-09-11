@@ -1,0 +1,8 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="38" height="10" viewBox="0 0 38 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="connector-arrow">
+<line id="Line" y1="4.5" x2="28" y2="4.5" stroke="#111111"/>
+<g id="chevron-right">
+<path id="Vector" d="M31.75 7.5L34.25 5L31.75 2.5" stroke="#111111" stroke-width="2" stroke-linecap="round"/>
+</g>
+</g>
+</svg>

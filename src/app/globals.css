@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #ffffff;
+  --color-panel: #f4f4f6;
+  --color-card: #ffffff;
+  --color-border: #e7e7eb;
+  --color-ink: #16151a;
+  --color-muted: #6b6b74;
+  --color-accent: #6c5ce7;
+  --color-accent-soft: #edebfc;
+
+  /* Homepage organic/dark-section accents */
+  --color-moss: #2f4a2f;
+  --color-moss-soft: #eef2ea;
+  --color-dark-bg: #14150f;
+  --color-dark-ink: #f5f3ea;
+  --color-dark-muted: #a6a89c;
+  --color-dark-border: #2c2d24;
+
+  /* QB animation palette (Accounting Agent cover) */
+  --color-app-surface: oklch(1 0 0);
+  --color-app-line: oklch(0.878 0.008 260.7);
+  --color-app-line-soft: oklch(0.921 0.005 258.3);
+  --color-app-green: oklch(0.618 0.192 141.5);
+  --color-app-green-foreground: oklch(1 0 0);
+  --color-app-blue: oklch(0.556 0.149 247.9);
+  --color-app-chrome: oklch(0.965 0.005 228.8);
+  --color-app-ink: oklch(0.349 0.005 271.3);
+  --color-app-ink-muted: oklch(0.532 0.009 278.5);
+  --color-app-ink-faint: oklch(0.653 0.01 264.5);
+  --color-app-dark: oklch(0.265 0.01 242.1);
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-panel: var(--color-panel);
+  --color-card: var(--color-card);
+  --color-border: var(--color-border);
+  --color-ink: var(--color-ink);
+  --color-muted: var(--color-muted);
+  --color-accent: var(--color-accent);
+  --color-accent-soft: var(--color-accent-soft);
+  --color-moss: var(--color-moss);
+  --color-moss-soft: var(--color-moss-soft);
+  --color-dark-bg: var(--color-dark-bg);
+  --color-dark-ink: var(--color-dark-ink);
+  --color-dark-muted: var(--color-dark-muted);
+  --color-dark-border: var(--color-dark-border);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-inter);
+  --font-hero: var(--font-inter);
+  --font-lora: var(--font-lora);
+
+  --color-app-surface: var(--color-app-surface);
+  --color-app-line: var(--color-app-line);
+  --color-app-line-soft: var(--color-app-line-soft);
+  --color-app-green: var(--color-app-green);
+  --color-app-green-foreground: var(--color-app-green-foreground);
+  --color-app-blue: var(--color-app-blue);
+  --color-app-chrome: var(--color-app-chrome);
+  --color-app-ink: var(--color-app-ink);
+  --color-app-ink-muted: var(--color-app-ink-muted);
+  --color-app-ink-faint: var(--color-app-ink-faint);
+  --color-app-dark: var(--color-app-dark);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+.section-anchor {
+  scroll-margin-top: 6rem;
+}
+
+.section-curve {
+  position: relative;
+  overflow: hidden;
+}
+
