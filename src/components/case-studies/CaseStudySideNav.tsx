@@ -1,7 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { LayoutGroup, motion, useReducedMotion } from "motion/react";
+import {
+  PUBLIC_CASE_STUDY_SECTION_IDS,
+  useCaseStudyLock,
+} from "./CaseStudyLock";
 
 export type CaseStudySection = { id: string; label: string };
 
@@ -14,12 +18,22 @@ export default function CaseStudySideNav({
   sections: CaseStudySection[];
 }) {
   const navRef = useRef<HTMLElement>(null);
-  const [activeId, setActiveId] = useState(sections[0]?.id);
+  const { unlocked } = useCaseStudyLock();
+  const visibleSections = useMemo(
+    () =>
+      unlocked
+        ? sections
+        : sections.filter((section) =>
+            PUBLIC_CASE_STUDY_SECTION_IDS.has(section.id),
+          ),
+    [sections, unlocked],
+  );
+  const [activeId, setActiveId] = useState(visibleSections[0]?.id);
   const [visible, setVisible] = useState(false);
   const reduceMotion = useReducedMotion();
 
   useEffect(() => {
-    const elements = sections
+    const elements = visibleSections
       .map(({ id }) => document.getElementById(id))
       .filter((el): el is HTMLElement => el !== null);
 
@@ -38,7 +52,7 @@ export default function CaseStudySideNav({
 
     elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, [sections]);
+  }, [visibleSections]);
 
   useEffect(() => {
     const overview = document.getElementById("overview");
@@ -81,7 +95,7 @@ export default function CaseStudySideNav({
     >
       <LayoutGroup id="case-study-nav">
         <ul className="space-y-0.5 text-sm">
-          {sections.map(({ id, label }) => {
+          {visibleSections.map(({ id, label }) => {
             const active = activeId === id;
             return (
               <li key={id}>

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import type { CaseStudySection } from "./CaseStudySideNav";
 import CaseStudyShell from "./CaseStudyShell";
+import { CaseStudyLocked } from "./CaseStudyLock";
 import ScrollPlayVideo from "./ScrollPlayVideo";
 
 const SECTIONS: CaseStudySection[] = [
@@ -20,7 +21,7 @@ const SECTIONS: CaseStudySection[] = [
 
 export default function MobileSalesModernizationTemplatePreview() {
   return (
-    <CaseStudyShell slug="mobile-sales-modernization" sections={SECTIONS}>
+    <CaseStudyShell slug="mobile-sales-modernization" sections={SECTIONS} lockProcess>
 
         <div className="flex flex-col gap-10 md:gap-12">
         {/* HEADER & HERO */}
@@ -107,6 +108,7 @@ export default function MobileSalesModernizationTemplatePreview() {
           </div>
         </section>
 
+        <CaseStudyLocked>
         {/* NATIVE TAILWIND FLOW DIAGRAM */}
         <section id="design-process" className="space-y-8 pt-10 border-t border-border scroll-mt-32">
           <div className="space-y-3">
@@ -477,6 +479,7 @@ export default function MobileSalesModernizationTemplatePreview() {
             </li>
           </ul>
         </section>
+        </CaseStudyLocked>
 
     </CaseStudyShell>
   );

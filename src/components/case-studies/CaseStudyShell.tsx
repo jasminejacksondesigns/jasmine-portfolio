@@ -3,28 +3,33 @@
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import CaseStudySideNav, { type CaseStudySection } from "./CaseStudySideNav";
+import { CaseStudyLockProvider } from "./CaseStudyLock";
 import { nextCaseStudy } from "./caseStudyFlow";
 
 export default function CaseStudyShell({
   slug,
   sections,
+  lockProcess = false,
   children,
 }: {
   slug: string;
   sections: CaseStudySection[];
+  lockProcess?: boolean;
   children: React.ReactNode;
 }) {
   const next = nextCaseStudy(slug);
 
   return (
-    <div className="bg-bg font-sans text-ink selection:bg-panel selection:text-ink">
-      <CaseStudySideNav sections={sections} />
-      <div className="mx-auto max-w-4xl px-6 pt-32 pb-24 sm:px-6 md:pt-40 md:pb-32">
-        <div className="flex flex-col gap-16 md:gap-24">{children}</div>
-        {next ? <CaseStudyNext next={next} /> : null}
+    <CaseStudyLockProvider enabled={lockProcess}>
+      <div className="bg-bg font-sans text-ink selection:bg-panel selection:text-ink">
+        <CaseStudySideNav sections={sections} />
+        <div className="mx-auto max-w-4xl px-6 pt-32 pb-24 sm:px-6 md:pt-40 md:pb-32">
+          <div className="flex flex-col gap-16 md:gap-24">{children}</div>
+          {next ? <CaseStudyNext next={next} /> : null}
+        </div>
+        <CaseStudyZoom />
       </div>
-      <CaseStudyZoom />
-    </div>
+    </CaseStudyLockProvider>
   );
 }
 

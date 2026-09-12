@@ -56,7 +56,7 @@ export const site = {
     email: "jasminejackson.designs@gmail.com",
     resumeHref: "/resume/jasmine-jackson-resume-2026.pdf",
     linkedin: "https://www.linkedin.com/in/jasminejackson19/",
-    github: "https://github.com/jasminejackson19",
+    github: "https://github.com/jasminejacksondesigns",
     instagram: { handle: "@allthatdesigns", href: "https://www.instagram.com/allthatdesigns/" },
   },
 };

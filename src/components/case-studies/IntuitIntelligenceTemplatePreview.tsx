@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import type { CaseStudySection } from "./CaseStudySideNav";
 import CaseStudyShell from "./CaseStudyShell";
+import { CaseStudyLocked } from "./CaseStudyLock";
 import ScrollPlayVideo from "./ScrollPlayVideo";
 import LaptopFrameVideo from "./LaptopFrameVideo";
 import LaptopFrameImage from "./LaptopFrameImage";
@@ -19,7 +20,7 @@ const SECTIONS: CaseStudySection[] = [
 
 export default function IntuitIntelligenceTemplatePreview() {
   return (
-    <CaseStudyShell slug="intuit-intelligence-homepage" sections={SECTIONS}>
+    <CaseStudyShell slug="intuit-intelligence-homepage" sections={SECTIONS} lockProcess>
 
         <div className="flex flex-col gap-10 md:gap-12">
         {/* HEADER & HERO */}
@@ -112,6 +113,7 @@ export default function IntuitIntelligenceTemplatePreview() {
           </div>
         </section>
 
+        <CaseStudyLocked>
         {/* PROCESS ARTIFACTS: V0 BETA */}
         <section id="process-artifacts" className="space-y-8 pt-10 border-t border-border scroll-mt-32">
           <div className="space-y-3">
@@ -287,6 +289,7 @@ export default function IntuitIntelligenceTemplatePreview() {
             </li>
           </ul>
         </section>
+        </CaseStudyLocked>
 
     </CaseStudyShell>
   );

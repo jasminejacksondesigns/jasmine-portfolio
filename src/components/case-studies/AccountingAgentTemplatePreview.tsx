@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import type { CaseStudySection } from "./CaseStudySideNav";
 import CaseStudyShell from "./CaseStudyShell";
+import { CaseStudyLocked } from "./CaseStudyLock";
 
 const SECTIONS: CaseStudySection[] = [
   { id: "overview", label: "Overview" },
@@ -15,7 +16,7 @@ const SECTIONS: CaseStudySection[] = [
 
 export default function AccountingAgentTemplatePreview() {
   return (
-    <CaseStudyShell slug="accounting-agent" sections={SECTIONS}>
+    <CaseStudyShell slug="accounting-agent" sections={SECTIONS} lockProcess>
 
         <div className="flex flex-col gap-10 md:gap-12">
         {/* HEADER & HERO */}
@@ -100,6 +101,7 @@ export default function AccountingAgentTemplatePreview() {
           </div>
         </section>
 
+        <CaseStudyLocked>
         {/* PROCESS ARTIFACTS */}
         <section id="process-artifacts" className="space-y-8 pt-10 border-t border-border scroll-mt-32">
           <div className="space-y-3">
@@ -236,6 +238,7 @@ export default function AccountingAgentTemplatePreview() {
             </li>
           </ul>
         </section>
+        </CaseStudyLocked>
 
     </CaseStudyShell>
   );

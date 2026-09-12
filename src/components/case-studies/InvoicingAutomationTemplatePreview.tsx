@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import type { CaseStudySection } from "./CaseStudySideNav";
 import CaseStudyShell from "./CaseStudyShell";
+import { CaseStudyLocked } from "./CaseStudyLock";
 import IphoneFrameVideo from "./IphoneFrameVideo";
 import ScrollPlayVideo from "./ScrollPlayVideo";
 
@@ -20,7 +21,7 @@ const SECTIONS: CaseStudySection[] = [
 
 export default function InvoicingAutomationTemplatePreview() {
   return (
-    <CaseStudyShell slug="invoicing-automation" sections={SECTIONS}>
+    <CaseStudyShell slug="invoicing-automation" sections={SECTIONS} lockProcess>
 
         <div className="flex flex-col gap-10 md:gap-12">
         {/* HEADER & HERO */}
@@ -109,6 +110,7 @@ export default function InvoicingAutomationTemplatePreview() {
           </div>
         </section>
 
+        <CaseStudyLocked>
         {/* INSPIRATION & COMPETITIVE ANALYSIS */}
         <section id="inspiration" className="space-y-8 pt-10 border-t border-border scroll-mt-32">
           <div className="space-y-3">
@@ -371,6 +373,7 @@ export default function InvoicingAutomationTemplatePreview() {
             </li>
           </ul>
         </section>
+        </CaseStudyLocked>
 
     </CaseStudyShell>
   );
