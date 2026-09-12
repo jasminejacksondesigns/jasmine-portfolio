@@ -40,8 +40,12 @@ const redHatDisplay = localFont({
   weight: "300 900",
 });
 
+const SITE_URL = "https://jasminejackson.design";
+const OG_ALT =
+  "Illustrated cream flower with green leaves, Jasmine Jackson’s portfolio mark.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jasmine-portfolio-one.vercel.app"),
+  metadataBase: new URL(SITE_URL),
   title: "Jasmine Jackson — Product Designer",
   description:
     "Jasmine Jackson is a product designer rooting ideas in user needs and growing thoughtful, impactful experiences.",
@@ -49,13 +53,32 @@ export const metadata: Metadata = {
     title: "Jasmine Jackson — Product Designer",
     description:
       "Jasmine Jackson is a product designer rooting ideas in user needs and growing thoughtful, impactful experiences.",
+    url: SITE_URL,
+    siteName: "Jasmine Jackson",
     type: "website",
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: OG_ALT,
+        type: "image/jpeg",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Jasmine Jackson — Product Designer",
     description:
       "Jasmine Jackson is a product designer rooting ideas in user needs and growing thoughtful, impactful experiences.",
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: OG_ALT,
+      },
+    ],
   },
 };
 
