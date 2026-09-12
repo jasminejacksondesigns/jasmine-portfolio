@@ -9,7 +9,7 @@ export const site = {
     paragraphs: [
       "Jasmine Jackson is a San Francisco–based Product Designer specializing in interactive systems, conversational AI, and end-to-end user experiences. With a background spanning enterprise platforms and rapid prototyping, I bridge the gap between complex technical infrastructure and intuitive, human-centered design.",
       "My approach combines systemic rigor with creative exploration. Whether engineering scalable design patterns, building live contextual prototypes with modern AI tools, or experimenting with digital and tactile media, I focus on crafting interfaces that feel seamless, expressive, and purposeful.",
-      "When I'm not designing screens, I'm usually building diy home decor, going on hikes practicing yoga, or training for my next half marathon around the Bay Area.",
+      "When I'm not designing screens, I'm usually building diy home decor, going on hikes, practicing yoga, or training for my next half marathon around the Bay Area.",
     ],
     photos: [
       { src: "/about/garden/img-0022.jpg", aspect: 412 / 412 },

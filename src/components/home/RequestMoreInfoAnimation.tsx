@@ -190,6 +190,7 @@ function Stage() {
         boxShadow: "0 20px 60px rgba(0,0,0,0.25)",
         background: COLOR.bg,
         fontFamily: FONT,
+        fontWeight: 500,
       }}
     >
       <style>{`
@@ -505,7 +506,7 @@ function Stage() {
             padding: 20,
           }}
         >
-          <span style={{ fontSize: 16, lineHeight: 1.5, color: COLOR.text }}>
+          <span style={{ fontSize: 16, fontWeight: 500, lineHeight: 1.5, color: COLOR.text }}>
             {typed}
             <span
               style={{
