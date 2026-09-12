@@ -49,6 +49,19 @@ export const metadata: Metadata = {
   title: "Jasmine Jackson — Product Designer",
   description:
     "Jasmine Jackson is a product designer rooting ideas in user needs and growing thoughtful, impactful experiences.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      {
+        url: "/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+  },
   openGraph: {
     title: "Jasmine Jackson — Product Designer",
     description:
@@ -60,7 +73,7 @@ export const metadata: Metadata = {
       {
         url: "/og.jpg",
         width: 1200,
-        height: 630,
+        height: 1200,
         alt: OG_ALT,
         type: "image/jpeg",
       },
@@ -75,7 +88,7 @@ export const metadata: Metadata = {
       {
         url: "/og.jpg",
         width: 1200,
-        height: 630,
+        height: 1200,
         alt: OG_ALT,
       },
     ],
