@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "motion/react";
 import GrowingFlowerMark from "./GrowingFlowerMark";
+import RoleCapsule from "./RoleCapsule";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 16 },
@@ -16,7 +16,7 @@ const fadeUp = {
 export default function Hero() {
   return (
     <section className="isolate flex flex-col items-center bg-bg pt-32 pb-16 text-center sm:pt-40 sm:pb-20">
-      <div className="mx-auto flex w-full max-w-[1368px] flex-col items-center px-4 sm:px-6">
+      <div className="mx-auto flex w-full max-w-[1680px] flex-col items-center px-4 sm:px-6">
         <motion.div
           initial="hidden"
           animate="show"
@@ -32,36 +32,15 @@ export default function Hero() {
           animate="show"
           custom={0.1}
           variants={fadeUp}
-          className="font-hero mt-8 max-w-4xl text-[clamp(1.35rem,2.6vw,2rem)] leading-[1.35] font-light text-ink"
+          className="font-display mt-8 max-w-4xl text-[clamp(1.35rem,2.6vw,2rem)] leading-snug font-light tracking-tight text-ink"
         >
           <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
-            <span>jasmine jackson is an</span>
-            <span className="rounded-full border border-ink px-4 py-0.5">
-              interaction designer
-            </span>
+            <span>jasmine jackson is a</span>
+            <RoleCapsule>product designer</RoleCapsule>
             <span>
               who roots ideas in real user needs and grows them into
               thoughtful, impactful experiences.
             </span>
-          </p>
-          <p className="mt-2">
-            currently exploring personal projects like{" "}
-            <Link
-              href="/work/homing"
-              className="underline decoration-1 underline-offset-2 hover:text-accent"
-            >
-              @Homing
-            </Link>
-            . previously{" "}
-            <a
-              href="https://www.intuit.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline decoration-1 underline-offset-2 hover:text-accent"
-            >
-              @Intuit
-            </a>
-            .
           </p>
         </motion.div>
       </div>

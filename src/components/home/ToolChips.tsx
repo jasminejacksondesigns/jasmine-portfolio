@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import Matter from "matter-js";
 
 type ToolItem = {
@@ -8,11 +9,20 @@ type ToolItem = {
   icon: string;
   bg: string;
   text: string;
+  blurb: string;
+};
+
+type PopoverState = {
+  index: number;
+  top: number;
+  left: number;
 };
 
 export default function ToolChips({ items }: { items: ToolItem[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const chipRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const popoverRef = useRef<HTMLDivElement>(null);
+  const [popover, setPopover] = useState<PopoverState | null>(null);
 
   // Reduced motion: place chips at rest immediately, no simulation.
   useLayoutEffect(() => {
@@ -144,6 +154,57 @@ export default function ToolChips({ items }: { items: ToolItem[] }) {
     };
   }, []);
 
+  // Click-outside and Escape to close the popover.
+  useEffect(() => {
+    if (!popover) return;
+
+    const handlePointerDown = (event: PointerEvent) => {
+      const target = event.target as Node;
+      if (popoverRef.current?.contains(target)) return;
+      if (chipRefs.current[popover.index]?.contains(target)) return;
+      setPopover(null);
+    };
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setPopover(null);
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [popover]);
+
+  const openChip = (index: number) => {
+    const chip = chipRefs.current[index];
+    if (!chip) return;
+
+    const chipRect = chip.getBoundingClientRect();
+    const popoverWidth = 240;
+    const gap = 10;
+
+    let left = chipRect.left + window.scrollX + chipRect.width / 2 - popoverWidth / 2;
+    const minLeft = window.scrollX + 8;
+    const maxLeft = window.scrollX + window.innerWidth - popoverWidth - 8;
+    left = Math.max(minLeft, Math.min(left, maxLeft));
+
+    // Anchored to the chip's top edge; the popover itself is translated
+    // upward by its own height via CSS so it always opens above the chip,
+    // regardless of the popover's rendered content height. Guard against a
+    // chip sitting too close to the top of the page, where shifting a
+    // (roughly estimated) full-height popover upward would run off-screen.
+    const estimatedMaxPopoverHeight = 170;
+    const top = Math.max(
+      chipRect.top + window.scrollY - gap,
+      window.scrollY + 8 + estimatedMaxPopoverHeight,
+    );
+
+    setPopover((prev) =>
+      prev?.index === index ? null : { index, top, left },
+    );
+  };
+
   return (
     <div
       ref={containerRef}
@@ -155,19 +216,53 @@ export default function ToolChips({ items }: { items: ToolItem[] }) {
           ref={(el) => {
             chipRefs.current[i] = el;
           }}
-          className="absolute top-0 left-0 flex items-center gap-2 rounded-full px-[18px] py-3 opacity-0 will-change-transform"
+          role="button"
+          tabIndex={0}
+          onClick={() => openChip(i)}
+          onKeyDown={(event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              openChip(i);
+            }
+          }}
+          className="absolute top-0 left-0 flex cursor-pointer items-center gap-2 rounded-full px-[18px] py-3 opacity-0 outline-none will-change-transform"
           style={{ backgroundColor: item.bg }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={item.icon} alt="" width={18} height={18} aria-hidden />
           <span
-            className="text-xs font-bold tracking-wide whitespace-nowrap uppercase"
+            className="font-subheading text-xs font-normal tracking-wide whitespace-nowrap uppercase"
             style={{ color: item.text }}
           >
             {item.name}
           </span>
         </div>
       ))}
+
+      {popover &&
+        createPortal(
+          <div
+            ref={popoverRef}
+            className="absolute z-[90] w-[240px] -translate-y-full rounded-2xl border border-border bg-white p-4 shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
+            style={{ top: popover.top, left: popover.left }}
+          >
+            <button
+              type="button"
+              aria-label="Close"
+              onClick={() => setPopover(null)}
+              className="absolute top-2.5 right-2.5 flex h-5 w-5 items-center justify-center rounded-full text-muted hover:bg-panel hover:text-ink"
+            >
+              ×
+            </button>
+            <p className="font-subheading text-xs font-normal tracking-wide text-ink uppercase">
+              {items[popover.index].name}
+            </p>
+            <p className="mt-1.5 text-xs leading-relaxed text-ink/80">
+              {items[popover.index].blurb}
+            </p>
+          </div>,
+          document.body,
+        )}
     </div>
   );
 }

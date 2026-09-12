@@ -20,7 +20,7 @@ function Section({
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-[13px] font-bold text-[#808080] sm:text-[15px]">
+    <p className="font-subheading text-[13px] font-normal text-[#808080] sm:text-[15px]">
       {children}
     </p>
   );
@@ -28,7 +28,7 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 
 function Heading({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="text-[32px] font-bold leading-[1.15] text-black sm:text-[38px] lg:text-[44px]">
+    <h2 className="font-display text-[32px] font-light leading-[1.15] text-black sm:text-[38px] lg:text-[44px]">
       {children}
     </h2>
   );
@@ -108,7 +108,7 @@ export default function AccountingAgentEditorial() {
       <section className="flex flex-col items-start gap-8 pt-10 pb-0 sm:pt-14">
         <div className="mx-auto w-full max-w-[1120px] px-6 sm:px-10">
           <Eyebrow>CASE STUDY — 04</Eyebrow>
-          <h1 className="mt-6 text-[15vw] leading-[0.95] font-extrabold tracking-tight text-black sm:text-[6.5rem] lg:text-[108px]">
+          <h1 className="font-display mt-6 text-[15vw] leading-[0.95] font-light tracking-tight text-black sm:text-[6.5rem] lg:text-[108px]">
             Accounting
             <br />
             Agent
@@ -121,15 +121,15 @@ export default function AccountingAgentEditorial() {
           </p>
           <div className="mt-10 flex flex-wrap gap-x-14 gap-y-6">
             <div className="flex min-w-[200px] flex-col gap-2">
-              <p className="text-xs font-bold text-[#8c8c8c]">ROLE</p>
+              <p className="font-subheading text-xs font-normal text-[#8c8c8c]">ROLE</p>
               <p className="text-base text-black">Product Designer</p>
             </div>
             <div className="flex min-w-[220px] flex-col gap-2">
-              <p className="text-xs font-bold text-[#8c8c8c]">TIMELINE</p>
+              <p className="font-subheading text-xs font-normal text-[#8c8c8c]">TIMELINE</p>
               <p className="text-base text-black">6 months, 0→1</p>
             </div>
             <div className="flex min-w-[260px] flex-col gap-2">
-              <p className="text-xs font-bold text-[#8c8c8c]">COMPANY</p>
+              <p className="font-subheading text-xs font-normal text-[#8c8c8c]">COMPANY</p>
               <p className="text-base text-black">Intuit</p>
             </div>
           </div>
@@ -243,11 +243,11 @@ export default function AccountingAgentEditorial() {
         <Heading>Results</Heading>
         <div className="flex w-full flex-col gap-6 sm:flex-row">
           <div className="flex flex-1 flex-col gap-3 rounded-2xl bg-[#f2f2f2] p-10">
-            <p className="text-6xl font-bold text-black sm:text-7xl">91%</p>
+            <p className="font-display text-6xl font-light text-black sm:text-7xl">91%</p>
             <p className="text-base text-[#666]">Positive voice of customer</p>
           </div>
           <div className="flex flex-1 flex-col gap-3 rounded-2xl bg-[#f2f2f2] p-10">
-            <p className="text-6xl font-bold text-black sm:text-7xl">0→1</p>
+            <p className="font-display text-6xl font-light text-black sm:text-7xl">0→1</p>
             <p className="text-base text-[#666]">New product in 12 weeks</p>
           </div>
         </div>

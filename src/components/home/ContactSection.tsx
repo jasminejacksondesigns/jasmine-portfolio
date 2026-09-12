@@ -1,74 +1,76 @@
 import { site } from "@/content/site";
-import Reveal from "./Reveal";
+
+function FooterFlowerMark({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 32.0002 46.7789"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      aria-hidden
+    >
+      <path
+        d="M12.7906 1.82426C13.5906 -1.17878 16.8574 0.155464 18.5977 1.38193C20.2372 -0.791009 22.5765 0.233157 24.1584 1.81175C25.3086 0.781708 26.3619 0.254851 27.9362 0.290759C31.0468 0.361719 30.9612 3.04853 30.0779 5.24044C29.9847 5.47165 29.5853 6.24382 29.5695 6.4442C30.128 6.34347 30.0842 6.23287 30.8116 6.25734C31.283 6.48833 31.5792 6.70458 31.7612 7.26649C32.0554 8.17449 31.774 9.30227 31.4237 10.1584C31.3413 10.3598 30.9631 10.7785 30.9484 10.9744C31.4469 11.2435 31.8387 11.3077 31.9594 11.9969C32.176 13.2346 31.4797 14.7576 30.9763 15.8699C30.9136 16.0084 30.7538 16.2183 30.9398 16.2946C32.7373 17.4835 31.7415 20.2564 30.9475 21.759C30.7772 22.0813 30.6535 22.3159 30.4315 22.5251C30.8396 22.9721 31.2359 23.3943 31.4927 23.9186C32.4063 25.7833 32.023 28.1479 30.036 29.121C29.8047 29.2342 29.7581 29.2705 29.4942 29.332L29.4477 29.4071C29.8003 30.6619 30.137 31.9706 29.4235 33.2169C29.0798 33.8207 28.5074 34.2613 27.8349 34.4398C27.1237 34.6238 26.1431 34.4981 25.4381 34.3255C25.3295 34.7356 25.2418 35.1265 25.0483 35.504C24.0548 37.4431 21.9678 37.7808 20.4315 36.28C19.811 37.2386 19.2543 37.8404 18.1044 38.096C16.3874 38.4779 15.416 37.5622 15.0842 35.9425C13.5022 37.1402 10.5072 38.7379 8.9185 36.6137C8.46141 36.0026 8.35174 35.2684 8.47174 34.5234C8.48031 34.4704 8.48947 34.4174 8.49927 34.3647C7.24259 34.4023 6.63197 34.2861 5.55569 33.5806C4.22571 32.3991 4.26598 31.0094 5.05095 29.5466C4.19674 29.5758 3.70238 29.4818 2.86321 29.273C-0.800746 27.5253 0.265246 23.9677 2.38176 21.429C1.13209 20.7561 0.486617 20.0081 0.339197 18.535C0.140799 16.5529 1.4303 14.7124 2.89722 13.4652C1.42757 12.0628 0.32656 10.2545 0.251966 8.18684C0.130357 4.81452 3.11398 4.63306 5.62643 4.76589C5.28404 3.57528 5.24008 2.63682 5.84111 1.49548C6.09868 1.00645 6.6128 0.53057 7.15857 0.404039C8.94929 -0.0112489 10.9655 0.763648 12.4693 1.63312C12.5771 1.69559 12.6843 1.75933 12.7906 1.82426Z"
+        fill="#D6D1C5"
+      />
+      <path
+        d="M21.1404 17.1595C23.6333 18.2205 22.9428 17.6126 24.2586 19.3701C24.206 21.081 22.7395 22.0628 21.3318 23.3111C18.9301 22.8142 19.6802 23.2201 18.0938 21.9317C18.4135 19.5308 19.1783 19.4091 21.1404 17.1595Z"
+        fill="#949283"
+      />
+      <path
+        d="M2.38507 29.3264C3.22423 29.5351 3.71859 29.6292 4.5728 29.6C3.78783 31.0627 3.74756 32.4525 5.07755 33.634C4.1465 34.6787 4.46362 40.5539 4.46522 42.2437C6.56985 39.9461 8.70076 40.3376 11.3408 39.1889C12.1352 38.8431 12.7059 38.5363 13.3968 38.0127C13.5392 38.2127 13.6735 38.3813 13.8529 38.5509C14.691 39.35 15.8156 39.7796 16.9742 39.7433C18.0912 39.7143 18.9372 39.2782 19.6965 38.483C19.8629 38.5881 20.0316 38.6895 20.2023 38.7872C21.5976 39.5674 23.905 38.9559 24.8619 37.7006C25.1032 37.384 25.3871 36.5063 25.729 36.4106C26.8791 36.7842 28.4081 35.966 29.2294 35.1869C30.4208 34.0566 30.3507 32.3322 31.2205 31.1059C31.7368 32.7435 31.1606 37.6987 30.8152 39.4054C30.6757 40.1019 30.4811 40.7864 30.2333 41.4522C28.1995 46.9355 23.7785 47.0659 18.7025 46.6123C14.5688 46.2436 10.7378 42.9398 6.56931 44.6406C5.72201 44.9863 4.73393 45.8193 4.41028 46.6903C3.49101 46.7945 1.10665 46.7929 0.1409 46.756C-0.00571677 44.3242 -0.0309382 41.8885 0.033106 39.4513C0.102666 37.1979 -0.0744198 35.0216 0.587977 32.8357C1.01744 31.4186 1.79946 30.5931 2.36574 29.3689L2.38507 29.3264Z"
+        fill="#4C5933"
+      />
+    </svg>
+  );
+}
 
 export default function ContactSection() {
   const { contact } = site;
 
   const links = [
-    { label: "Email", meta: contact.email, href: `mailto:${contact.email}` },
-    { label: "Resume / CV", meta: "PDF, updated 2026", href: contact.resumeHref },
-    { label: "LinkedIn", meta: "jasminejackson19", href: contact.linkedin },
-    { label: "Instagram", meta: contact.instagram.handle, href: contact.instagram.href },
+    { label: "LinkedIn", href: contact.linkedin },
+    { label: "Email", href: `mailto:${contact.email}` },
+    { label: "GitHub", href: contact.github },
+    { label: "Instagram", href: contact.instagram.href },
+    { label: "Resume", href: contact.resumeHref },
   ];
 
   return (
     <section
       id="contact"
-      className="section-anchor relative z-10 bg-dark-bg text-dark-ink"
+      className="section-anchor relative z-10 w-full border-t border-footer-border bg-gradient-to-b from-footer-from to-footer-to"
     >
-      <div className="mx-auto grid max-w-[1368px] grid-cols-1 gap-14 px-4 py-24 sm:px-6 sm:py-32 lg:grid-cols-[420px_1fr] lg:grid-rows-[auto_auto]">
-        <Reveal className="order-1 lg:col-start-1 lg:row-start-1">
-          <p className="text-dark-muted text-xs font-medium tracking-widest uppercase">
-            Get in touch
+      <div className="mx-auto flex max-w-[1680px] flex-col gap-10 px-4 py-16 sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:py-20">
+        <div className="flex max-w-xl flex-col gap-4">
+          <p className="font-subheading text-xs font-normal tracking-[0.5px] text-muted uppercase">
+            Designed + coded by Jasmine
           </p>
-          <h2 className="mt-4 text-4xl leading-[1.05] font-semibold tracking-tight sm:text-5xl">
-            Let&apos;s create something awesome together.
-          </h2>
-        </Reveal>
-
-        <Reveal
-          delay={0.1}
-          className="order-2 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:order-none lg:col-start-2 lg:row-start-1 lg:row-span-2"
-        >
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target={link.href.startsWith("mailto:") ? undefined : "_blank"}
-              rel={link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-              className="group border-dark-border hover:border-dark-ink flex items-center justify-between gap-4 rounded-2xl border p-5 transition-colors"
-            >
-              <div>
-                <p className="font-semibold">{link.label}</p>
-                <p className="text-dark-muted mt-1 text-sm">{link.meta}</p>
-              </div>
-              <span
-                aria-hidden
-                className="border-dark-border text-dark-ink group-hover:border-dark-ink group-hover:bg-dark-ink group-hover:text-dark-bg flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition-colors"
-              >
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path
-                    d="M4 12L12 4M12 4H5M12 4V11"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-            </a>
-          ))}
-        </Reveal>
-
-        <Reveal
-          delay={0.05}
-          className="text-dark-muted order-3 flex flex-col gap-4 text-sm lg:order-none lg:col-start-1 lg:row-start-2"
-        >
-          <p>San Francisco, CA</p>
-          <p>
+          <p className="font-display text-2xl leading-snug font-light tracking-tight text-ink sm:text-[26px]">
+            Let&apos;s bloom something awesome together.
+          </p>
+          <p className="text-sm font-light text-muted">
+            San Francisco, CA
+            <br />
             © {new Date().getFullYear()} {site.name}
           </p>
-        </Reveal>
+        </div>
+
+        <div className="flex flex-col items-start gap-6 sm:items-end">
+          <nav className="flex flex-wrap gap-x-6 gap-y-2 font-display text-sm font-light text-ink">
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+                rel={link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+                className="transition-colors hover:text-accent"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+          <FooterFlowerMark className="h-12 w-8" />
+        </div>
       </div>
     </section>
   );

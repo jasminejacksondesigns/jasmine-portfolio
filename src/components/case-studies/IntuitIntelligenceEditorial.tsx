@@ -19,7 +19,7 @@ function Section({
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-[13px] font-bold text-[#808080] sm:text-[15px]">
+    <p className="font-subheading text-[13px] font-normal text-[#808080] sm:text-[15px]">
       {children}
     </p>
   );
@@ -27,7 +27,7 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 
 function Heading({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="text-[32px] font-bold leading-[1.15] text-black sm:text-[38px] lg:text-[44px]">
+    <h2 className="font-display text-[32px] font-light leading-[1.15] text-black sm:text-[38px] lg:text-[44px]">
       {children}
     </h2>
   );
@@ -99,7 +99,7 @@ export default function IntuitIntelligenceEditorial() {
       <section className="flex flex-col items-start gap-8 pt-10 pb-0 sm:pt-14">
         <div className="mx-auto w-full max-w-[1120px] px-6 sm:px-10">
           <Eyebrow>CASE STUDY — 05</Eyebrow>
-          <h1 className="mt-6 text-[12vw] leading-[0.95] font-extrabold tracking-tight text-black sm:text-[4.6rem] lg:text-[78px]">
+          <h1 className="font-display mt-6 text-[12vw] leading-[0.95] font-light tracking-tight text-black sm:text-[4.6rem] lg:text-[78px]">
             Intuit Intelligence
             <br />
             Homepage
@@ -112,29 +112,28 @@ export default function IntuitIntelligenceEditorial() {
           </p>
           <div className="mt-10 flex flex-wrap gap-x-14 gap-y-6">
             <div className="flex min-w-[200px] flex-col gap-2">
-              <p className="text-xs font-bold text-[#8c8c8c]">ROLE</p>
+              <p className="font-subheading text-xs font-normal text-[#8c8c8c]">ROLE</p>
               <p className="text-base text-black">Lead Product Designer</p>
             </div>
             <div className="flex min-w-[220px] flex-col gap-2">
-              <p className="text-xs font-bold text-[#8c8c8c]">TOOLS</p>
+              <p className="font-subheading text-xs font-normal text-[#8c8c8c]">TOOLS</p>
               <p className="text-base text-black">Figma, Cursor, Claude</p>
             </div>
             <div className="flex min-w-[260px] flex-col gap-2">
-              <p className="text-xs font-bold text-[#8c8c8c]">COMPANY</p>
+              <p className="font-subheading text-xs font-normal text-[#8c8c8c]">COMPANY</p>
               <p className="text-base text-black">Intuit</p>
             </div>
           </div>
         </div>
 
         <div className="mt-6 flex w-full justify-center bg-[#fafafa] py-16 sm:py-20">
-          <Image
-            src="/intuit-intelligence-homepage/ii-hero.jpg"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/intuit-intelligence-homepage/hero-media.svg"
             alt="Intuit Intelligence assisting a small business owner on the go"
-            width={645}
-            height={537}
-            priority
-            quality={95}
-            className="h-auto w-full max-w-[420px] rounded-2xl sm:max-w-[480px]"
+            width={1280}
+            height={760}
+            className="h-auto w-full max-w-[720px] sm:max-w-[820px]"
           />
         </div>
       </section>
@@ -280,11 +279,11 @@ export default function IntuitIntelligenceEditorial() {
         <Heading>Results</Heading>
         <div className="flex w-full flex-col gap-6 sm:flex-row">
           <div className="flex flex-1 flex-col gap-3 rounded-2xl bg-[#f2f2f2] p-10">
-            <p className="text-6xl font-bold text-black sm:text-7xl">13%</p>
+            <p className="font-display text-6xl font-light text-black sm:text-7xl">13%</p>
             <p className="text-base text-[#666]">Gain in adoption</p>
           </div>
           <div className="flex flex-1 flex-col gap-3 rounded-2xl bg-[#f2f2f2] p-10">
-            <p className="text-6xl font-bold text-black sm:text-7xl">5</p>
+            <p className="font-display text-6xl font-light text-black sm:text-7xl">5</p>
             <p className="text-base text-[#666]">Partner teams created prompts</p>
           </div>
         </div>

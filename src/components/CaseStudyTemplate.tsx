@@ -15,26 +15,26 @@ export default function CaseStudyTemplate({ project }: { project: CaseStudy }) {
       </Link>
 
       <Panel className="p-8 sm:p-12">
-        <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+        <h1 className="font-display text-4xl font-light tracking-tight sm:text-5xl">
           {project.title}
         </h1>
         <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-3 text-sm sm:grid-cols-4">
           <div>
-            <dt className="text-xs tracking-wide text-muted uppercase">Company</dt>
+            <dt className="font-subheading text-xs tracking-wide text-muted uppercase">Company</dt>
             <dd className="mt-0.5">{project.company}</dd>
           </div>
           <div>
-            <dt className="text-xs tracking-wide text-muted uppercase">Role</dt>
+            <dt className="font-subheading text-xs tracking-wide text-muted uppercase">Role</dt>
             <dd className="mt-0.5">{project.role}</dd>
           </div>
           {project.date && (
             <div>
-              <dt className="text-xs tracking-wide text-muted uppercase">Date</dt>
+              <dt className="font-subheading text-xs tracking-wide text-muted uppercase">Date</dt>
               <dd className="mt-0.5">{project.date}</dd>
             </div>
           )}
           <div>
-            <dt className="text-xs tracking-wide text-muted uppercase">Tools</dt>
+            <dt className="font-subheading text-xs tracking-wide text-muted uppercase">Tools</dt>
             <dd className="mt-0.5">{project.tools.join(", ")}</dd>
           </div>
         </dl>
@@ -65,7 +65,7 @@ export default function CaseStudyTemplate({ project }: { project: CaseStudy }) {
               );
             case "subheading":
               return (
-                <h2 key={i} className="pt-2 text-2xl font-semibold tracking-tight">
+                <h2 key={i} className="font-display pt-2 text-2xl font-light tracking-tight">
                   {block.text}
                 </h2>
               );
@@ -162,8 +162,8 @@ export default function CaseStudyTemplate({ project }: { project: CaseStudy }) {
                 <div key={i} className="flex flex-wrap gap-8 rounded-2xl bg-panel p-6">
                   {block.items.map((stat) => (
                     <div key={stat.label}>
-                      <p className="text-2xl font-semibold text-accent">{stat.value}</p>
-                      <p className="text-sm text-muted">{stat.label}</p>
+                      <p className="font-display text-2xl font-light text-accent">{stat.value}</p>
+                      <p className="font-subheading text-sm text-muted">{stat.label}</p>
                     </div>
                   ))}
                 </div>

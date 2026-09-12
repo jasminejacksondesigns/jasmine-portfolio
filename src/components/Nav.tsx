@@ -31,7 +31,7 @@ export default function Nav() {
               href={link.href}
               className={`rounded-full px-4 py-1.5 text-sm transition-colors ${
                 isActive
-                  ? "bg-panel font-medium text-ink"
+                  ? "bg-panel font-normal text-ink"
                   : "text-muted hover:text-ink"
               }`}
             >

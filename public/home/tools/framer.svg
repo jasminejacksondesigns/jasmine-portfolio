@@ -1,6 +1,6 @@
 <svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="framer" clip-path="url(#clip0_0_10)">
-<path id="Vector" d="M9 11.9994V17.2494L3.7494 11.9994V6.7494H14.2506V1.4994H3.7494L14.2506 11.9994H9ZM3.7494 11.9994H9" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path id="Vector" d="M9 11.9994V17.2494L3.7494 11.9994V6.7494H14.2506V1.4994H3.7494L14.2506 11.9994H9ZM3.7494 11.9994H9" stroke="black" stroke-width="2" stroke-linecap="round"/>
 </g>
 <defs>
 <clipPath id="clip0_0_10">
