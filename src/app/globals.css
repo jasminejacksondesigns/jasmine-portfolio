@@ -14,6 +14,7 @@
   --color-moss: #2f4a2f;
   --color-moss-soft: #eef2ea;
   --color-role-pill: #4c5933;
+  --color-role-text: #8aa25d;
   --color-dark-bg: #14150f;
   --color-dark-ink: #f5f3ea;
   --color-dark-muted: #a6a89c;
@@ -51,6 +52,7 @@
   --color-moss: var(--color-moss);
   --color-moss-soft: var(--color-moss-soft);
   --color-role-pill: var(--color-role-pill);
+  --color-role-text: var(--color-role-text);
   --color-dark-bg: var(--color-dark-bg);
   --color-dark-ink: var(--color-dark-ink);
   --color-dark-muted: var(--color-dark-muted);
@@ -95,6 +97,24 @@ body {
 .section-curve {
   position: relative;
   overflow: hidden;
+}
+
+.cs-hero {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--color-panel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-hero video,
+.cs-hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .cs-figure img {

@@ -152,7 +152,7 @@ export default function CaseStudyTemplate({ project }: { project: CaseStudy }) {
                   &ldquo;{block.text}&rdquo;
                   {block.author && (
                     <footer className="mt-2 text-sm text-muted not-italic">
-                      — {block.author}
+                      {block.author}
                     </footer>
                   )}
                 </blockquote>

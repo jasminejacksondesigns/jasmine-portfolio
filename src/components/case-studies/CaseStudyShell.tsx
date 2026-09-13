@@ -6,6 +6,14 @@ import CaseStudySideNav, { type CaseStudySection } from "./CaseStudySideNav";
 import { CaseStudyLockProvider } from "./CaseStudyLock";
 import { nextCaseStudy } from "./caseStudyFlow";
 
+export function CaseStudyBody({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="cs-body mx-auto flex w-full max-w-[1360px] flex-col gap-16 px-6 pt-10 sm:px-10 md:gap-24 md:pt-14 lg:px-16">
+      {children}
+    </div>
+  );
+}
+
 export default function CaseStudyShell({
   slug,
   sections,
@@ -21,14 +29,22 @@ export default function CaseStudyShell({
 
   return (
     <CaseStudyLockProvider enabled={lockProcess}>
-      <div className="bg-bg font-sans text-ink selection:bg-panel selection:text-ink">
-        <CaseStudySideNav sections={sections} />
-        <div className="mx-auto max-w-4xl px-6 pt-32 pb-24 sm:px-6 md:pt-40 md:pb-32">
-          <div className="flex flex-col gap-16 md:gap-24">{children}</div>
-          {next ? <CaseStudyNext next={next} /> : null}
+      <div className="bg-bg font-sans text-ink selection:bg-panel selection:text-ink xl:grid xl:grid-cols-[12.5rem_minmax(0,1fr)]">
+        <aside className="relative z-40 hidden border-r border-border bg-bg xl:block">
+          <div className="sticky top-12 pt-8">
+            <CaseStudySideNav sections={sections} />
+          </div>
+        </aside>
+        <div className="min-w-0 pb-24 md:pb-32">
+          {children}
+          {next ? (
+            <div className="mx-auto w-full max-w-[1360px] px-6 sm:px-10 lg:px-16">
+              <CaseStudyNext next={next} />
+            </div>
+          ) : null}
         </div>
-        <CaseStudyZoom />
       </div>
+      <CaseStudyZoom />
     </CaseStudyLockProvider>
   );
 }

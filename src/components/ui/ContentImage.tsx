@@ -30,7 +30,7 @@ export default function ContentImage({
         />
       </a>
       <figcaption className="mt-2 text-sm text-muted">
-        {caption} — click to view full size
+        {caption}, click to view full size
       </figcaption>
     </figure>
   );

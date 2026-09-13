@@ -12,19 +12,19 @@ const bySlug = (slug: string) => caseStudies.find((c) => c.slug === slug)!;
 
 const leftColumn = [
   { video: "/work/mockups/intuit-intelligence-hero.mp4", aspect: 2.05, fit: "cover" as const, project: bySlug("intuit-intelligence-homepage"), bg: "bg-[#eef2ea]" },
-  {
-    video: "/homing/homing.mp4",
-    aspect: 2.03,
-    fit: "cover" as const,
-    project: bySlug("homing"),
-    bg: "bg-[#8fc9e8]",
-  },
-  { src: "/work/mockups/realme-10-v2.png", aspect: 1.33, fit: "contain" as const, project: bySlug("mobile-sales-modernization"), bg: "bg-[#c7ecfc]" },
+  { aspect: 1.55, fit: "contain" as const, project: bySlug("accounting-agent"), requestMoreInfo: true, bg: "bg-[#cfe3f7]", padded: true },
+  { src: "/work/mockups/realme-10-v2.png", aspect: 1.72, fit: "contain" as const, project: bySlug("mobile-sales-modernization"), bg: "bg-[#c7ecfc]" },
 ];
 
 const rightColumn = [
   { src: "/work/mockups/iphone-14-v2.png", aspect: 2200 / 3246, fit: "contain" as const, project: bySlug("invoicing-automation"), bg: "bg-[#aed3ab]", padClass: "p-10 sm:p-16" },
-  { aspect: 1.39, fit: "contain" as const, project: bySlug("accounting-agent"), requestMoreInfo: true, bg: "bg-[#cfe3f7]", padded: true },
+  {
+    video: "/homing/homing.mp4",
+    aspect: 1.44,
+    fit: "cover" as const,
+    project: bySlug("homing"),
+    bg: "bg-[#8fc9e8]",
+  },
 ];
 
 function MockupTile({
@@ -117,7 +117,6 @@ export default function WorkPreview() {
                 key={tile.project.slug}
                 {...tile}
                 delay={0.05 * i}
-                className={i === leftColumn.length - 1 ? "lg:mt-auto" : ""}
               />
             ))}
           </div>

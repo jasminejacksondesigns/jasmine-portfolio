@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import { LayoutGroup, motion, useReducedMotion } from "motion/react";
 import {
   PUBLIC_CASE_STUDY_SECTION_IDS,
@@ -9,7 +10,6 @@ import {
 
 export type CaseStudySection = { id: string; label: string };
 
-const HERO_HIDE_Y = 96;
 const FOOTER_GAP = 24;
 
 export default function CaseStudySideNav({
@@ -29,7 +29,7 @@ export default function CaseStudySideNav({
     [sections, unlocked],
   );
   const [activeId, setActiveId] = useState(visibleSections[0]?.id);
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   const reduceMotion = useReducedMotion();
 
   useEffect(() => {
@@ -55,20 +55,16 @@ export default function CaseStudySideNav({
   }, [visibleSections]);
 
   useEffect(() => {
-    const overview = document.getElementById("overview");
-    const hero = document.querySelector(".cs-hero");
     const contact = document.getElementById("contact");
-    if (!(hero instanceof HTMLElement) || !overview) return;
 
     const update = () => {
-      const pastHero = hero.getBoundingClientRect().bottom < HERO_HIDE_Y;
       const nav = navRef.current;
       const hitsFooter =
         nav != null &&
         contact != null &&
         contact.getBoundingClientRect().top <
           nav.getBoundingClientRect().bottom + FOOTER_GAP;
-      setVisible(pastHero && !hitsFooter);
+      setVisible(!hitsFooter);
     };
 
     update();
@@ -87,13 +83,20 @@ export default function CaseStudySideNav({
       aria-label="Case study sections"
       aria-hidden={!visible}
       inert={!visible}
-      className={`fixed top-28 left-0 z-40 hidden w-48 pl-3 xl:block ${
+      className={`w-full px-3 ${
         visible
           ? "pointer-events-auto translate-x-0 opacity-100"
           : "pointer-events-none -translate-x-2 opacity-0"
       } transition-[opacity,transform] duration-300 ease-out`}
     >
       <LayoutGroup id="case-study-nav">
+        <Link
+          href="/#work"
+          className="mb-5 inline-flex items-center gap-1.5 px-2.5 text-sm tracking-wider text-muted uppercase transition-colors hover:text-ink"
+        >
+          <span aria-hidden>←</span>
+          Back
+        </Link>
         <ul className="space-y-0.5 text-sm">
           {visibleSections.map(({ id, label }) => {
             const active = activeId === id;

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import type { CaseStudySection } from "./CaseStudySideNav";
-import CaseStudyShell from "./CaseStudyShell";
+import CaseStudyShell, { CaseStudyBody } from "./CaseStudyShell";
 import { CaseStudyLocked } from "./CaseStudyLock";
 
 const SECTIONS: CaseStudySection[] = [
@@ -18,18 +18,30 @@ export default function AccountingAgentTemplatePreview() {
   return (
     <CaseStudyShell slug="accounting-agent" sections={SECTIONS} lockProcess>
 
+        {/* FLAGSHIP HERO */}
+        <section className="cs-hero">
+          <video
+            src="/accounting-agent/collab-solution-demo.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="h-full w-full object-contain"
+          />
+        </section>
+
+        <CaseStudyBody>
         <div className="flex flex-col gap-10 md:gap-12">
-        {/* HEADER & HERO */}
-        <header id="overview" className="space-y-10 scroll-mt-32">
-          {/* Title & One-Liner */}
+        <header id="overview" className="scroll-mt-32">
           <div className="space-y-4">
-            <h1 className="font-display text-4xl md:text-6xl font-light tracking-tight text-ink leading-[1.1]">
+            <h1 className="font-display text-3xl md:text-5xl font-light tracking-tight text-ink leading-[1.15]">
               Accounting Agent
             </h1>
-            <p className="text-lg md:text-xl text-muted max-w-2xl font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-muted max-w-3xl font-light leading-relaxed">
               An AI-native way for accountants and small business owners to resolve missing transaction details, without the email back-and-forth.
             </p>
           </div>
+        </header>
 
           {/* Monospace Metadata Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-border text-xs">
@@ -50,21 +62,6 @@ export default function AccountingAgentTemplatePreview() {
               <span className="text-ink">0→1 in 12 Weeks</span>
             </div>
           </div>
-        </header>
-
-        {/* FLAGSHIP HERO MEDIA FRAME */}
-        <section className="cs-hero">
-          <div className="cs-figure relative aspect-video overflow-hidden rounded-xl bg-bg">
-              <video
-                src="/accounting-agent/collab-solution-demo.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="h-full w-full object-contain"
-              />
-          </div>
-        </section>
         </div>
 
         {/* OVERVIEW & PROBLEM / SOLUTION */}
@@ -72,7 +69,7 @@ export default function AccountingAgentTemplatePreview() {
           <div id="problem" className="space-y-3 scroll-mt-32">
             <h2 className="font-subheading text-xs uppercase tracking-wider text-muted">The Problem</h2>
             <p className="text-ink/80 leading-relaxed text-sm">
-              Accountants don&rsquo;t have enough context on a transaction, and it takes too long to get answers from clients. Small business owners get loose emails that pile up in their inbox, have to answer long messages, and often don&rsquo;t give enough detail — leading to even more back-and-forth.
+              Accountants don&rsquo;t have enough context on a transaction, and it takes too long to get answers from clients. Small business owners get loose emails that pile up in their inbox, have to answer long messages, and often don&rsquo;t give enough detail, leading to even more back-and-forth.
             </p>
             <ul className="text-[11px] text-muted space-y-1 pt-2 border-l-2 border-border pl-3">
               <li>Accountant.. not enough info about a transaction, takes too long to get answers from clients.</li>
@@ -82,7 +79,7 @@ export default function AccountingAgentTemplatePreview() {
           <div id="solution" className="space-y-3 scroll-mt-32">
             <h2 className="font-subheading text-xs uppercase tracking-wider text-ink">The Solution</h2>
             <p className="text-ink/80 leading-relaxed text-sm">
-              An accountant can ask for missing details right from the transaction grid — AI drafts the question, suggests smart reply options based on the category, and keeps a running thread per transaction so nothing gets lost in an inbox.
+              An accountant can ask for missing details right from the transaction grid. AI drafts the question, suggests smart reply options based on the category, and keeps a running thread per transaction so nothing gets lost in an inbox.
             </p>
           </div>
         </section>
@@ -110,7 +107,7 @@ export default function AccountingAgentTemplatePreview() {
           </div>
 
           <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
-            The first pass had no shared components and was built mobile-first, with completely separate experiences for accountants and their clients. It worked, but had no visual polish — and accountants specifically asked for a grid view so they could see and edit many transactions at once.
+            The first pass had no shared components and was built mobile-first, with completely separate experiences for accountants and their clients. It worked, but had no visual polish, and accountants specifically asked for a grid view so they could see and edit many transactions at once.
           </p>
 
           <div className="space-y-3">
@@ -133,20 +130,20 @@ export default function AccountingAgentTemplatePreview() {
             </p>
             <ul className="space-y-3 text-sm text-ink/80">
               <li className="flex items-start gap-3">
-                <span className="text-ink text-xs mt-0.5">—</span>
+                <span className="text-ink text-xs mt-0.5">-</span>
                 <span>Let accountants follow up, even after the AI marks a conversation complete.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-ink text-xs mt-0.5">—</span>
+                <span className="text-ink text-xs mt-0.5">-</span>
                 <span>Clarify what happens when you click &ldquo;Add requests&rdquo; on the bank grid.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-ink text-xs mt-0.5">—</span>
+                <span className="text-ink text-xs mt-0.5">-</span>
                 <span>Swap the confusing &ldquo;+ +&rdquo; buttons for a single paperclip attachment icon.</span>
               </li>
             </ul>
             <blockquote className="border-l-2 border-ink/20 pl-4">
-              <p className="text-sm text-ink/80 italic">&ldquo;Pills are too generic — they may be doing more harm than good.&rdquo;</p>
+              <p className="text-sm text-ink/80 italic">&ldquo;Pills are too generic, they may be doing more harm than good.&rdquo;</p>
               <p className="mt-2 text-xs text-muted">Beta feedback on the category-suggestion UI</p>
             </blockquote>
           </div>
@@ -160,23 +157,23 @@ export default function AccountingAgentTemplatePreview() {
           </div>
 
           <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
-            Looking at how other tools handled similar transaction-and-messaging pairings informed the chart model — placing the transaction question side by side with the message thread, rather than as two disconnected views. The AI&rsquo;s guidance itself was written to be specific, not generic:
+            Looking at how other tools handled similar transaction-and-messaging pairings informed the chart model, placing the transaction question side by side with the message thread, rather than as two disconnected views. The AI&rsquo;s guidance itself was written to be specific, not generic:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="p-4 rounded-lg bg-panel border border-border">
-              <p className="text-sm text-ink/80 italic">&ldquo;School expenses can be both — adding detail improves accuracy.&rdquo;</p>
+              <p className="text-sm text-ink/80 italic">&ldquo;School expenses can be both, adding detail improves accuracy.&rdquo;</p>
             </div>
             <div className="p-4 rounded-lg bg-panel border border-border">
-              <p className="text-sm text-ink/80 italic">&ldquo;Gas stations are typically gas or snacks — attribute gas to a project, and note who snacks were for.&rdquo;</p>
+              <p className="text-sm text-ink/80 italic">&ldquo;Gas stations are typically gas or snacks, attribute gas to a project, and note who snacks were for.&rdquo;</p>
             </div>
             <div className="p-4 rounded-lg bg-panel border border-border">
-              <p className="text-sm text-ink/80 italic">&ldquo;Meal deductions depend on purpose — name who attended and why.&rdquo;</p>
+              <p className="text-sm text-ink/80 italic">&ldquo;Meal deductions depend on purpose, name who attended and why.&rdquo;</p>
             </div>
           </div>
 
           <blockquote className="border-l-2 border-ink/20 pl-4">
-            <p className="text-sm text-ink/80 italic">&ldquo;Can you send me the bank statement? Need to be very specific — include the 4-digit account number...&rdquo;</p>
+            <p className="text-sm text-ink/80 italic">&ldquo;Can you send me the bank statement? Need to be very specific, include the 4-digit account number...&rdquo;</p>
             <p className="mt-2 text-xs text-muted">Today: answers scattered across email, disconnected from the transaction itself.</p>
           </blockquote>
         </section>
@@ -228,10 +225,10 @@ export default function AccountingAgentTemplatePreview() {
 
           <ul className="list-none space-y-4 pl-0 text-sm text-ink/80">
             <li>
-              <strong className="text-ink">Specificity built trust, not automation:</strong> generic AI suggestions eroded trust fast — specific guidance was what built confidence.
+              <strong className="text-ink">Specificity built trust, not automation:</strong> generic AI suggestions eroded trust fast. Specific guidance was what built confidence.
             </li>
             <li>
-              <strong className="text-ink">Email set the bar:</strong> the real competition wasn&rsquo;t another app, it was email — and it set the bar for how low-friction this needed to feel.
+              <strong className="text-ink">Email set the bar:</strong> the real competition wasn&rsquo;t another app, it was email, and it set the bar for how low-friction this needed to feel.
             </li>
             <li>
               <strong className="text-ink">Research doesn&rsquo;t stop at launch:</strong> beta feedback reshaped interactions the team thought were finished.
@@ -239,6 +236,7 @@ export default function AccountingAgentTemplatePreview() {
           </ul>
         </section>
         </CaseStudyLocked>
+        </CaseStudyBody>
 
     </CaseStudyShell>
   );

@@ -98,7 +98,7 @@ export default function IntuitIntelligenceEditorial() {
       {/* Hero */}
       <section className="flex flex-col items-start gap-8 pt-10 pb-0 sm:pt-14">
         <div className="mx-auto w-full max-w-[1120px] px-6 sm:px-10">
-          <Eyebrow>CASE STUDY — 05</Eyebrow>
+          <Eyebrow>CASE STUDY 05</Eyebrow>
           <h1 className="font-display mt-6 text-[12vw] leading-[0.95] font-light tracking-tight text-black sm:text-[4.6rem] lg:text-[78px]">
             Intuit Intelligence
             <br />
@@ -190,7 +190,7 @@ export default function IntuitIntelligenceEditorial() {
         </Body>
         <Body>
           I also explored a dropdown-style zero state through a quick,
-          AI-assisted &ldquo;vibe-coded&rdquo; prototype — a faster way to
+          AI-assisted &ldquo;vibe-coded&rdquo; prototype, a faster way to
           test an alternate interaction before committing design time to it.
         </Body>
         <Clip
@@ -204,7 +204,7 @@ export default function IntuitIntelligenceEditorial() {
         <Heading>Animating to Cloak Latency Constraints</Heading>
         <Body>
           While building the designs, my engineering team ran into issues
-          having the initial batch of insight prompts load — potentially
+          having the initial batch of insight prompts load, potentially
           leading to drop-off in customer engagement.
         </Body>
         <Body>

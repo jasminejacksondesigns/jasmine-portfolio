@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import type { CaseStudySection } from "./CaseStudySideNav";
-import CaseStudyShell from "./CaseStudyShell";
+import CaseStudyShell, { CaseStudyBody } from "./CaseStudyShell";
 import { CaseStudyLocked } from "./CaseStudyLock";
 import ScrollPlayVideo from "./ScrollPlayVideo";
 
@@ -23,18 +23,31 @@ export default function MobileSalesModernizationTemplatePreview() {
   return (
     <CaseStudyShell slug="mobile-sales-modernization" sections={SECTIONS} lockProcess>
 
+        {/* FLAGSHIP HERO */}
+        <section className="cs-hero" style={{ background: "#b8dbb6" }}>
+          <video
+            src="/mobile-sales-modernization/msm-hero-video.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="h-full w-full object-contain"
+            style={{ background: "#b8dbb6" }}
+          />
+        </section>
+
+        <CaseStudyBody>
         <div className="flex flex-col gap-10 md:gap-12">
-        {/* HEADER & HERO */}
-        <header id="overview" className="space-y-10 scroll-mt-32">
-          {/* Title & One-Liner */}
+        <header id="overview" className="scroll-mt-32">
           <div className="space-y-4">
-            <h1 className="font-display text-4xl md:text-6xl font-light tracking-tight text-ink leading-[1.1]">
+            <h1 className="font-display text-3xl md:text-5xl font-light tracking-tight text-ink leading-[1.15]">
               Mobile Sales Modernization
             </h1>
-            <p className="text-lg md:text-xl text-muted max-w-2xl font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-muted max-w-3xl font-light leading-relaxed">
               Redesigning QuickBooks Mobile&rsquo;s Sales Receipt and Receive Payment so they feel like one consistent product, built on a new shared component library.
             </p>
           </div>
+        </header>
 
           {/* Monospace Metadata Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-border text-xs">
@@ -55,20 +68,6 @@ export default function MobileSalesModernizationTemplatePreview() {
               <span className="text-ink">80% Fewer Regressions</span>
             </div>
           </div>
-        </header>
-
-        {/* FLAGSHIP HERO MEDIA FRAME */}
-        <section className="cs-hero">
-          <div className="cs-figure relative overflow-hidden rounded-xl bg-bg">
-              <ScrollPlayVideo
-                src="/mobile-sales-modernization/msm-hero-video.mp4"
-                once
-                waitForScroll
-                controls={false}
-                className="block aspect-[4/3] h-auto w-full object-contain"
-              />
-          </div>
-        </section>
         </div>
 
         {/* OVERVIEW & PROBLEM / SOLUTION */}
@@ -76,7 +75,7 @@ export default function MobileSalesModernizationTemplatePreview() {
           <div id="problem" className="space-y-3 scroll-mt-32">
             <h2 className="font-subheading text-xs uppercase tracking-wider text-muted">The Problem</h2>
             <p className="text-ink/80 leading-relaxed text-sm">
-              QuickBooks mobile sales forms were vastly different from one another. A small business owner managing accounts receivable on the go found the app unintuitive, missing features available on web, and inconsistent form to form — leaving them unconfident in mobile and inclined to fall back to the website.
+              QuickBooks mobile sales forms were vastly different from one another. A small business owner managing accounts receivable on the go found the app unintuitive, missing features available on web, and inconsistent form to form, leaving them unconfident in mobile and inclined to fall back to the website.
             </p>
             <ul className="text-[11px] text-muted space-y-1 pt-2 border-l-2 border-border pl-3">
               <li>I am.. a small business using my mobile device to manage accounts receivable.</li>
@@ -89,7 +88,7 @@ export default function MobileSalesModernizationTemplatePreview() {
           <div id="solution" className="space-y-3 scroll-mt-32">
             <h2 className="font-subheading text-xs uppercase tracking-wider text-ink">The Solution</h2>
             <p className="text-ink/80 leading-relaxed text-sm">
-              Create consistency across the sales forms and bring mobile to parity with web, using a new shared component library — starting with Sales Receipt and Receive Payment as the first real use case.
+              Create consistency across the sales forms and bring mobile to parity with web, using a new shared component library, starting with Sales Receipt and Receive Payment as the first real use case.
             </p>
           </div>
         </section>
@@ -147,7 +146,7 @@ export default function MobileSalesModernizationTemplatePreview() {
               <div className="flex-1 p-4 rounded-lg bg-panel border border-border space-y-3 relative">
                 <span className="text-[10px] text-ink">BUILD</span>
                 <h3 className="font-subheading font-light text-sm text-ink">Building on QBDS, Live</h3>
-                <p className="text-xs text-ink/75">First real use case for the new QBDS iOS library — defined missing components alongside the QBDS team as we went.</p>
+                <p className="text-xs text-ink/75">First real use case for the new QBDS iOS library, defined missing components alongside the QBDS team as we went.</p>
               </div>
 
               {/* Arrow 3 */}
@@ -165,7 +164,7 @@ export default function MobileSalesModernizationTemplatePreview() {
             </div>
           </div>
           <p className="text-xs text-muted text-center">
-            Fig 2.0 — From auditing the current state, through low-fi flows and building live on the new QBDS library, to the Hero Amount component and final shipped forms.
+            Fig 2.0. From auditing the current state, through low-fi flows and building live on the new QBDS library, to the Hero Amount component and final shipped forms.
           </p>
         </section>
 
@@ -205,7 +204,7 @@ export default function MobileSalesModernizationTemplatePreview() {
           <div className="space-y-3">
             <div className="relative aspect-[5184/1552] cs-figure overflow-hidden rounded-xl">
               <Image
-                src="/mobile-sales-modernization/msm-flow-sales-receipt-diagram-v2.png"
+                src="/mobile-sales-modernization/msm-flow-sales-receipt-diagram-v3.png"
                 alt="Current workflow for Sales Receipt"
                 fill
                 sizes="(min-width: 768px) 896px, 100vw"
@@ -219,7 +218,7 @@ export default function MobileSalesModernizationTemplatePreview() {
           <div className="space-y-3">
             <div className="relative aspect-[5184/1552] cs-figure overflow-hidden rounded-xl">
               <Image
-                src="/mobile-sales-modernization/msm-flow-receive-payment-diagram-v2.png"
+                src="/mobile-sales-modernization/msm-flow-receive-payment-diagram-v3.png"
                 alt="Current workflow for Receive Payment"
                 fill
                 sizes="(min-width: 768px) 896px, 100vw"
@@ -344,11 +343,11 @@ export default function MobileSalesModernizationTemplatePreview() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
             <blockquote className="border-l-2 border-ink/20 pl-4">
               <p className="text-sm text-ink/80 italic">&ldquo;What we have on the screen seems easier, I like that in the new version the fields are set apart in a bubble.&rdquo;</p>
-              <p className="mt-2 text-xs text-muted">— Daniel</p>
+              <p className="mt-2 text-xs text-muted">Daniel</p>
             </blockquote>
             <blockquote className="border-l-2 border-ink/20 pl-4">
               <p className="text-sm text-ink/80 italic">&ldquo;It feels like they&rsquo;re from the same product and I appreciate that. I know different teams work on different screens but I appreciate the consistency.&rdquo;</p>
-              <p className="mt-2 text-xs text-muted">— Sandra</p>
+              <p className="mt-2 text-xs text-muted">Sandra</p>
             </blockquote>
           </div>
         </section>
@@ -391,15 +390,17 @@ export default function MobileSalesModernizationTemplatePreview() {
           </div>
 
           <div className="space-y-3">
-            <div className="relative aspect-[1296/1860] max-w-sm mx-auto cs-figure overflow-hidden rounded-xl">
-              <Image
-                src="/mobile-sales-modernization/msm-hero-amount-final-states-comparison-v2.png"
-                alt="Final Hero Amount component added to the QBDS library"
-                fill
-                sizes="(min-width: 768px) 384px, 100vw"
-                unoptimized
-                className="object-contain"
-              />
+            <div className="mx-auto w-full max-w-xl">
+              <div className="relative aspect-[1296/1860] cs-figure overflow-hidden rounded-xl">
+                <Image
+                  src="/mobile-sales-modernization/msm-hero-amount-final-states-comparison-v2.png"
+                  alt="Final Hero Amount component added to the QBDS library"
+                  fill
+                  sizes="(min-width: 768px) 576px, 100vw"
+                  unoptimized
+                  className="object-contain"
+                />
+              </div>
             </div>
             <p className="text-xs text-muted">Final component that was added to the QBDS library.</p>
           </div>
@@ -431,15 +432,17 @@ export default function MobileSalesModernizationTemplatePreview() {
           </div>
 
           <div className="space-y-3">
-            <div className="relative aspect-[1396/1408] cs-figure overflow-hidden rounded-xl">
-              <Image
-                src="/mobile-sales-modernization/msm-hero-amount-final-v2.png"
-                alt="Hero Amount, final design"
-                fill
-                sizes="(min-width: 768px) 896px, 100vw"
-                unoptimized
-                className="object-contain"
-              />
+            <div className="mx-auto w-full max-w-2xl">
+              <div className="relative aspect-[1396/1408] cs-figure overflow-hidden rounded-xl">
+                <Image
+                  src="/mobile-sales-modernization/msm-hero-amount-final-v2.png"
+                  alt="Hero Amount, final design"
+                  fill
+                  sizes="(min-width: 768px) 672px, 100vw"
+                  unoptimized
+                  className="object-contain"
+                />
+              </div>
             </div>
             <p className="text-xs text-muted">&ldquo;Hero Amount,&rdquo; final design.</p>
           </div>
@@ -480,6 +483,7 @@ export default function MobileSalesModernizationTemplatePreview() {
           </ul>
         </section>
         </CaseStudyLocked>
+        </CaseStudyBody>
 
     </CaseStudyShell>
   );

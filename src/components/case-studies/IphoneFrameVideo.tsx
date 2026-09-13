@@ -17,11 +17,12 @@ export default function IphoneFrameVideo({
   const reduceMotion = useReducedMotion();
 
   return (
-    <motion.div
-      className={`relative mx-auto w-full max-w-[280px] ${className}`}
-      whileHover={reduceMotion ? undefined : { y: -6 }}
-      transition={{ type: "spring", visualDuration: 0.4, bounce: 0.18 }}
-    >
+    <div className="cs-figure w-full">
+      <motion.div
+        className={`relative mx-auto w-full max-w-[280px] ${className}`}
+        whileHover={reduceMotion ? undefined : { y: -6 }}
+        transition={{ type: "spring", visualDuration: 0.4, bounce: 0.18 }}
+      >
       <div
         aria-hidden
         className="pointer-events-none absolute top-[17%] -left-[3px] z-10 flex flex-col"
@@ -48,7 +49,8 @@ export default function IphoneFrameVideo({
             style={{ transform: `scale(${screenScale})` }}
           />
         </div>
-      </div>
-    </motion.div>
+        </div>
+      </motion.div>
+    </div>
   );
 }

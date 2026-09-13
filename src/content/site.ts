@@ -7,9 +7,9 @@ export const site = {
     headshot: "/about/garden/headshot-v4.jpg",
     heading: "Welcome to my garden!",
     paragraphs: [
-      "Jasmine Jackson is a San Francisco–based Product Designer specializing in interactive systems, conversational AI, and end-to-end user experiences. With a background spanning enterprise platforms and rapid prototyping, I bridge the gap between complex technical infrastructure and intuitive, human-centered design.",
-      "My approach combines systemic rigor with creative exploration. Whether engineering scalable design patterns, building live contextual prototypes with modern AI tools, or experimenting with digital and tactile media, I focus on crafting interfaces that feel seamless, expressive, and purposeful.",
-      "When I'm not designing screens, I'm usually building diy home decor, going on hikes, practicing yoga, or training for my next half marathon around the Bay Area.",
+      "I am a San Francisco-based Product Designer with a background in product management, giving me a unique edge in bridging business strategy with user experience. That PM mindset shapes how I evaluate customer needs, align business goals, and prioritize feature roadmaps before diving into execution. I thrive on difficult problem spaces, often borrowing interaction patterns from unrelated apps and industries to find inventive solutions.",
+      "My work focuses on turning intricate systems into simple, intuitive interactions. Most recently, I designed conversational AI experiences for Intuit Intelligence, crafting end-to-end workflows for reasoning models, file inputs, contextual sources, and creating insight prompts. Comfortable building directly with AI tools and modern prototyping workflows, I rapidly iterate to turn exploratory concepts into scalable design patterns and dynamic UI states.",
+      "Outside of digital screens, I am passionate about health, architecture, nature, and creative tech. You can usually find me crafting hands-on DIY home decor, hiking, practicing yoga, or training for my next half marathon around the Bay.",
     ],
     photos: [
       { src: "/about/garden/img-0022.jpg", aspect: 412 / 412 },
@@ -42,9 +42,9 @@ export const site = {
     label: "Tools I use",
     heading: "Click to see what I do with them",
     items: [
-      { name: "Figma", icon: "/home/tools/figma.svg", bg: "#f0ebe1", text: "#3d3527", blurb: "My home base for design — wireframes, high-fidelity mockups, and prototyping every case study on this site." },
+      { name: "Figma", icon: "/home/tools/figma.svg", bg: "#f0ebe1", text: "#3d3527", blurb: "My home base for design, wireframes, high-fidelity mockups, and prototyping every case study on this site." },
       { name: "ChatGPT", icon: "/home/tools/chatgpt-logo.png", bg: "#b7d9b1", text: "#1f3a1a", blurb: "My go-to for brainstorming, rubber-ducking ideas, and getting a fast second opinion on writing." },
-      { name: "Claude Code", icon: "/home/tools/claude-logo.png", bg: "#b9d4e0", text: "#1c2f38", blurb: "I used Claude Code to build this entire portfolio — layout, copy, and every case study rebuild." },
+      { name: "Claude Code", icon: "/home/tools/claude-logo.png", bg: "#b9d4e0", text: "#1c2f38", blurb: "I used Claude Code to build this entire portfolio, layout, copy, and every case study rebuild." },
       { name: "Framer", icon: "/home/tools/framer.svg", bg: "#9fc9a8", text: "#16301f", blurb: "For quick, high-fidelity motion prototypes when a static Figma frame isn't enough to sell an interaction." },
       { name: "Cursor", icon: "/home/tools/cursor-logo.png", bg: "#cfe3f7", text: "#1a2b3d", blurb: "My AI-native code editor for vibe-coding quick prototypes and testing ideas outside of Figma." },
       { name: "GitHub", icon: "/home/tools/github.svg", bg: "#ddd0b8", text: "#362c1a", blurb: "Where I version and host the code behind my personal projects, like this site and Homing." },

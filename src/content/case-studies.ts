@@ -38,7 +38,7 @@ export const caseStudies: CaseStudy[] = [
       "A first-of-its-kind AI-powered feature that lets QuickBooks Mobile users photograph anything and automatically generate a transaction quickly.",
     company: "Intuit",
     role: "Lead Product Designer",
-    date: "June – August 2024",
+    date: "June to August 2024",
     tools: ["Figma", "Usertesting"],
     featured: true,
     coverImage: "/invoicing-automation/invoicing-hero.avif",
@@ -150,7 +150,7 @@ export const caseStudies: CaseStudy[] = [
       "Improving Intuit Intelligence's entry point to help customers understand the breadth and depth of what the tool can do, and designing insight prompts to include real data from the customer.",
     company: "Intuit",
     role: "Lead Product Designer",
-    date: "Feb – May 2026",
+    date: "Feb to May 2026",
     tools: ["Figma", "Cursor", "Claude"],
     coverImage: "/intuit-intelligence-homepage/ii-hero.jpg",
     cardStats: [
@@ -425,7 +425,7 @@ export const caseStudies: CaseStudy[] = [
     tools: ["Figma", "Usertesting"],
     coverImage: "/mobile-sales-modernization/hero-final.png",
     cardStats: [
-      { value: "10–12", label: "Customers interviewed, iOS & Android" },
+      { value: "10-12", label: "Customers interviewed, iOS & Android" },
     ],
     content: [
       {
@@ -518,7 +518,7 @@ export const caseStudies: CaseStudy[] = [
       {
         type: "stats",
         items: [
-          { value: "10–12", label: "Customers interviewed across iOS and Android" },
+          { value: "10-12", label: "Customers interviewed across iOS and Android" },
         ],
       },
       {
@@ -559,7 +559,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     content: [
       { type: "paragraph", text: "A make-a-thon project that turns travel moments into shareable magnets." },
-      { type: "subheading", text: "Challenge — Making a trip feel sendable" },
+      { type: "subheading", text: "Challenge, Making a trip feel sendable" },
       {
         type: "paragraph",
         text: "Travel memories usually live as camera-roll photos, easy to take, hard to share in a way that feels physical and personal. At SF Make-a-thon, we wanted a tiny product that could turn a moment into something you could actually send home.",

@@ -107,7 +107,7 @@ export default function AccountingAgentEditorial() {
       {/* Hero */}
       <section className="flex flex-col items-start gap-8 pt-10 pb-0 sm:pt-14">
         <div className="mx-auto w-full max-w-[1120px] px-6 sm:px-10">
-          <Eyebrow>CASE STUDY — 04</Eyebrow>
+          <Eyebrow>CASE STUDY 04</Eyebrow>
           <h1 className="font-display mt-6 text-[15vw] leading-[0.95] font-light tracking-tight text-black sm:text-[6.5rem] lg:text-[108px]">
             Accounting
             <br />
@@ -180,7 +180,7 @@ export default function AccountingAgentEditorial() {
         <Body>
           Initial designs created entirely different views for accountants
           and small business owners. The accountants could see both sides,
-          and they wanted some of what the small business owners had — both
+          and they wanted some of what the small business owners had, both
           a grid view and a chat view.
         </Body>
         <Body>

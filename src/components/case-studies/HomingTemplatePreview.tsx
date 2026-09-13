@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import type { CaseStudySection } from "./CaseStudySideNav";
-import CaseStudyShell from "./CaseStudyShell";
+import CaseStudyShell, { CaseStudyBody } from "./CaseStudyShell";
 
 const SECTIONS: CaseStudySection[] = [
   { id: "overview", label: "Overview" },
@@ -16,18 +16,39 @@ export default function HomingTemplatePreview() {
   return (
     <CaseStudyShell slug="homing" sections={SECTIONS}>
 
+        {/* FLAGSHIP HERO */}
+        <section className="cs-hero">
+          <video
+            src="/homing/homing.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="h-full w-full object-contain"
+          />
+        </section>
+
+        <CaseStudyBody>
         <div className="flex flex-col gap-10 md:gap-12">
-        {/* HEADER & HERO */}
-        <header id="overview" className="space-y-10 scroll-mt-32">
-          {/* Title & One-Liner */}
+        <header id="overview" className="space-y-4 scroll-mt-32">
           <div className="space-y-4">
-            <h1 className="font-display text-4xl md:text-6xl font-light tracking-tight text-ink leading-[1.1]">
+            <h1 className="font-display text-3xl md:text-5xl font-light tracking-tight text-ink leading-[1.15]">
               Homing
             </h1>
-            <p className="text-lg md:text-xl text-muted max-w-2xl font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-muted max-w-3xl font-light leading-relaxed">
               A make-a-thon project that turns travel moments into shareable magnets.
             </p>
           </div>
+
+          <a
+            href="https://homing-phi.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cs-link inline-block text-sm text-ink"
+          >
+            Visit live site ↗
+          </a>
+        </header>
 
           {/* Monospace Metadata Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-border text-xs">
@@ -48,42 +69,18 @@ export default function HomingTemplatePreview() {
               <span className="text-ink">2.5 Hours to Ship</span>
             </div>
           </div>
-
-          <a
-            href="https://homing-phi.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cs-link inline-block text-sm text-ink"
-          >
-            Visit live site ↗
-          </a>
-        </header>
-
-        {/* FLAGSHIP HERO MEDIA FRAME */}
-        <section className="cs-hero space-y-3">
-          <div className="cs-figure relative aspect-video overflow-hidden rounded-xl bg-bg">
-              <video
-                src="/homing/homing.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="h-full w-full object-contain"
-              />
-          </div>
-        </section>
         </div>
         <section className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-10 border-t border-border md:gap-12">
           <div id="problem" className="space-y-3 scroll-mt-32">
             <h2 className="font-subheading text-xs uppercase tracking-wider text-muted">The Challenge</h2>
             <p className="text-ink/80 leading-relaxed text-sm">
-              Travel memories usually live as camera-roll photos — easy to take, hard to share in a way that feels physical and personal. At SF Make-a-thon, we wanted a tiny product that could turn a moment into something you could actually send home.
+              Travel memories usually live as camera-roll photos, easy to take, hard to share in a way that feels physical and personal. At SF Make-a-thon, we wanted a tiny product that could turn a moment into something you could actually send home.
             </p>
           </div>
           <div id="solution" className="space-y-3 scroll-mt-32">
             <h2 className="font-subheading text-xs uppercase tracking-wider text-ink">The Solution</h2>
             <p className="text-ink/80 leading-relaxed text-sm">
-              Homing lets you drop a photo, a view, a snack, a little treasure, and turns it into a fridge magnet you can send — built as a partner project in a single make-a-thon sprint.
+              Homing lets you drop a photo, a view, a snack, a little treasure, and turns it into a fridge magnet you can send, built as a partner project in a single make-a-thon sprint.
             </p>
           </div>
         </section>
@@ -106,7 +103,7 @@ export default function HomingTemplatePreview() {
         <section id="design-process" className="space-y-8 pt-10 border-t border-border scroll-mt-32">
           <div className="space-y-3">
             <span className="font-subheading text-xs text-ink uppercase tracking-wider">Design Process</span>
-            <h2 className="font-display text-2xl font-light text-ink tracking-tight">Scope, Build, Ship — Same Day</h2>
+            <h2 className="font-display text-2xl font-light text-ink tracking-tight">Scope, Build, Ship. Same Day</h2>
           </div>
 
           <div className="p-6 rounded-xl border border-border bg-panel/40 space-y-6">
@@ -128,7 +125,7 @@ export default function HomingTemplatePreview() {
               <div className="flex-1 p-4 rounded-lg bg-panel border border-border space-y-3 relative">
                 <span className="text-[10px] text-ink">BUILD</span>
                 <h3 className="font-subheading font-light text-sm text-ink">Designing With Agents Only</h3>
-                <p className="text-xs text-ink/75">Every design move went through agents — the constraint forced sharper product decisions and a faster loop from idea to shippable UI.</p>
+                <p className="text-xs text-ink/75">Every design move went through agents. The constraint forced sharper product decisions and a faster loop from idea to shippable UI.</p>
               </div>
 
               {/* Arrow 2 */}
@@ -198,6 +195,7 @@ export default function HomingTemplatePreview() {
             </li>
           </ul>
         </section>
+        </CaseStudyBody>
 
     </CaseStudyShell>
   );

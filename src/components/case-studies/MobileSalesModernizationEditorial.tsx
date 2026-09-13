@@ -106,7 +106,7 @@ function Quote({ text, author }: { text: string; author?: string }) {
       <p className="text-2xl text-black italic sm:text-[32px]">
         &ldquo;{text}&rdquo;
       </p>
-      {author && <p className="mt-2 text-base text-[#808080]">— {author}</p>}
+      {author && <p className="mt-2 text-base text-[#808080]">{author}</p>}
     </blockquote>
   );
 }
@@ -123,7 +123,7 @@ export default function MobileSalesModernizationEditorial() {
       {/* Hero */}
       <section className="flex flex-col items-start gap-8 pt-10 pb-0 sm:pt-14">
         <div className="mx-auto w-full max-w-[1120px] px-6 sm:px-10">
-          <Eyebrow>CASE STUDY — 02</Eyebrow>
+          <Eyebrow>CASE STUDY 02</Eyebrow>
           <h1 className="font-display mt-6 text-[13vw] leading-[0.95] font-light tracking-tight text-black sm:text-[5.2rem] lg:text-[88px]">
             Mobile Sales
             <br />
@@ -145,7 +145,7 @@ export default function MobileSalesModernizationEditorial() {
             </div>
             <div className="flex min-w-[260px] flex-col gap-2">
               <p className="font-subheading text-xs font-normal text-[#8c8c8c]">COMPANY</p>
-              <p className="text-base text-black">QuickBooks — Mobile</p>
+              <p className="text-base text-black">QuickBooks Mobile</p>
             </div>
           </div>
         </div>
@@ -169,7 +169,7 @@ export default function MobileSalesModernizationEditorial() {
         <Body>
           QuickBooks mobile sales forms were vastly different from one
           another in their current state. Consistency between each form
-          would make the overall experience less confusing to adopt —
+          would make the overall experience less confusing to adopt,
           potentially driving higher use of all of them.
         </Body>
         <div className="mt-2 flex max-w-[900px] flex-col gap-3 text-lg text-black sm:text-xl">
@@ -184,7 +184,7 @@ export default function MobileSalesModernizationEditorial() {
             and not all web features are available on mobile.
           </p>
           <p>
-            Which makes me feel unconfident in the app — inclined to just use
+            Which makes me feel unconfident in the app, inclined to just use
             the QuickBooks website instead.
           </p>
         </div>
@@ -192,7 +192,7 @@ export default function MobileSalesModernizationEditorial() {
 
       {/* Sales Receipt: current state */}
       <Section>
-        <Heading>Sales Receipt — Current State</Heading>
+        <Heading>Sales Receipt: Current State</Heading>
         <Body>
           To start, I audited the entire current landscape: what existed for
           other forms on mobile, what existed on web, and what the current
@@ -210,11 +210,11 @@ export default function MobileSalesModernizationEditorial() {
 
       {/* Sales Receipt: flow to final */}
       <Section bg="tint">
-        <Heading>Sales Receipt — Flow to Final</Heading>
+        <Heading>Sales Receipt: Flow to Final</Heading>
         <Body>
           This is the typical path a user takes when creating a Sales
-          Receipt. The existing framework — a main edit page that opens into
-          a specific workflow per section — was already there, but I needed
+          Receipt. The existing framework, a main edit page that opens into
+          a specific workflow per section, was already there, but I needed
           to determine exactly what went into each workflow, how much detail
           to show, and the hierarchy of every section.
         </Body>
@@ -236,7 +236,7 @@ export default function MobileSalesModernizationEditorial() {
 
         <Body>
           At mid-fidelity I started experimenting with components from our
-          QBDS library — for example, moving payment-method selection from an
+          QBDS library, for example, moving payment-method selection from an
           open input field to a selectable list, cutting clicks and friction.
         </Body>
         <Shot
@@ -250,7 +250,7 @@ export default function MobileSalesModernizationEditorial() {
         <Body>
           Because this was the first real use case for the new QBDS iOS
           mobile component library, I worked closely with the QBDS team to
-          define components that didn&rsquo;t exist yet — which slowed the
+          define components that didn&rsquo;t exist yet, which slowed the
           mid-fidelity stage, but shaped the library for features built after
           mine.
         </Body>
@@ -265,7 +265,7 @@ export default function MobileSalesModernizationEditorial() {
 
       {/* Receive Payment: Hero Amount */}
       <Section>
-        <Heading>Receive Payment — the &ldquo;Hero Amount&rdquo;</Heading>
+        <Heading>Receive Payment: the &ldquo;Hero Amount&rdquo;</Heading>
         <Body>
           In the old form, users could create, edit, and save everything on
           one page. Moving to the new component system made the pattern more
@@ -280,7 +280,7 @@ export default function MobileSalesModernizationEditorial() {
           alt="Hero Amount component states across many variations"
         />
         <Caption>
-          &ldquo;Hero Amount&rdquo; states — built through a working session
+          &ldquo;Hero Amount&rdquo; states, built through a working session
           with visual designers and engineers
         </Caption>
         <Shot
@@ -294,10 +294,10 @@ export default function MobileSalesModernizationEditorial() {
 
       {/* Receive Payment: edge cases */}
       <Section bg="tint">
-        <Heading>Receive Payment — Edge Cases</Heading>
+        <Heading>Receive Payment: Edge Cases</Heading>
         <Body>
           The current state of the design surfaced a long tail of edge cases
-          for Receive Payment — a $0 balance, a payment with no outstanding
+          for Receive Payment, a $0 balance, a payment with no outstanding
           invoice, adding a credit instead. I worked with my partners to log
           each case and mock up a resolution for it.
         </Body>
@@ -310,7 +310,7 @@ export default function MobileSalesModernizationEditorial() {
         <Caption>Working through Receive Payment&rsquo;s edge cases</Caption>
         <Body>
           One thing I learned from this project is that cross-functional
-          accountability and collaboration matter — spending time up front on
+          accountability and collaboration matter, spending time up front on
           requirements and the current experience is crucial to success down
           the road.
         </Body>
@@ -320,9 +320,9 @@ export default function MobileSalesModernizationEditorial() {
       <Section>
         <Heading>Validating with Research</Heading>
         <Body>
-          I ran 10–12 interviews across iOS and Android — at least six
+          I ran 10-12 interviews across iOS and Android, at least six
           participants using QuickBooks Mobile sales forms, and two using web
-          sales forms but not mobile — to see whether the new forms felt
+          sales forms but not mobile, to see whether the new forms felt
           consistent and easy to use, and where the flow broke down.
         </Body>
         <div className="w-full">
@@ -350,7 +350,7 @@ export default function MobileSalesModernizationEditorial() {
         <Body>
           Customers spontaneously identified the redesigned forms as part of
           the same product, and found the new invoice simple, clean, and
-          organized. They also cared about unpaid and overdue invoices —
+          organized. They also cared about unpaid and overdue invoices,
           directly shaping the roadmap: I added status filters and resurfaced
           overdue invoices at the top of the list.
         </Body>
@@ -388,7 +388,7 @@ export default function MobileSalesModernizationEditorial() {
           </p>
           <p>
             When a component didn&rsquo;t exist yet, I could build it with
-            QBDS rather than wait for it — that unblocked the project and
+            QBDS rather than wait for it, that unblocked the project and
             shaped the library for what came next.
           </p>
           <p>

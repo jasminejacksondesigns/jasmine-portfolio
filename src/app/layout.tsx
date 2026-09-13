@@ -46,7 +46,7 @@ const OG_ALT =
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Jasmine Jackson — Product Designer",
+  title: "Jasmine Jackson, Product Designer",
   description:
     "Jasmine Jackson is a product designer rooting ideas in user needs and growing thoughtful, impactful experiences.",
   icons: {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Jasmine Jackson — Product Designer",
+    title: "Jasmine Jackson, Product Designer",
     description:
       "Jasmine Jackson is a product designer rooting ideas in user needs and growing thoughtful, impactful experiences.",
     url: SITE_URL,
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jasmine Jackson — Product Designer",
+    title: "Jasmine Jackson, Product Designer",
     description:
       "Jasmine Jackson is a product designer rooting ideas in user needs and growing thoughtful, impactful experiences.",
     images: [

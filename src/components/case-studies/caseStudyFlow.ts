@@ -5,11 +5,6 @@ export const CASE_STUDY_FLOW = [
     company: "Intuit",
   },
   {
-    slug: "homing",
-    title: "Homing",
-    company: "SF Make-a-thon",
-  },
-  {
     slug: "mobile-sales-modernization",
     title: "Mobile Sales Modernization",
     company: "Intuit",
@@ -23,6 +18,11 @@ export const CASE_STUDY_FLOW = [
     slug: "accounting-agent",
     title: "Accounting Agent",
     company: "Intuit",
+  },
+  {
+    slug: "homing",
+    title: "Homing",
+    company: "SF Make-a-thon",
   },
 ] as const;
 

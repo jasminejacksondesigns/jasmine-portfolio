@@ -99,7 +99,7 @@ export default function HomingEditorial() {
       {/* Hero */}
       <section className="flex flex-col items-start gap-8 pt-10 pb-0 sm:pt-14">
         <div className="mx-auto w-full max-w-[1120px] px-6 sm:px-10">
-          <Eyebrow>CASE STUDY — 03</Eyebrow>
+          <Eyebrow>CASE STUDY 03</Eyebrow>
           <h1 className="font-display mt-6 text-[15vw] leading-[0.95] font-light tracking-tight text-black sm:text-[6.5rem] lg:text-[108px]">
             Homing
           </h1>
@@ -145,7 +145,7 @@ export default function HomingEditorial() {
       <Section bg="tint">
         <Heading>The Challenge</Heading>
         <Body>
-          Travel memories usually live as camera-roll photos — easy to take,
+          Travel memories usually live as camera-roll photos, easy to take,
           hard to share in a way that feels physical and personal. At SF
           Make-a-thon, we wanted a tiny product that could turn a moment into
           something you could actually send home.
@@ -162,9 +162,9 @@ export default function HomingEditorial() {
         </Body>
       </Section>
 
-      {/* 01 — Designing with agents only */}
+      {/* 01. Designing with agents only */}
       <Section bg="tint">
-        <Heading>01 — Designing with Agents Only</Heading>
+        <Heading>01. Designing with Agents Only</Heading>
         <Body>
           As co-design lead on a partner team, I pushed an AI-native
           workflow: every design move went through agents, no traditional
@@ -180,9 +180,9 @@ export default function HomingEditorial() {
         <Caption>With my co-design partner at SF Make-a-thon</Caption>
       </Section>
 
-      {/* 02 — Shipping the slice */}
+      {/* 02. Shipping the slice */}
       <Section>
-        <Heading>02 — Shipping the Slice</Heading>
+        <Heading>02. Shipping the Slice</Heading>
         <Body>
           We scoped to one clear job: upload or capture a photo, and get a
           magnet-ready keepsake flow. That focus kept the build tight enough

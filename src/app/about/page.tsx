@@ -7,7 +7,7 @@ export default function AboutPage() {
   const { about, contact } = site;
 
   return (
-    <div className="mx-auto max-w-[1680px] px-4 pt-32 pb-24 sm:px-6 sm:pt-40 sm:pb-32">
+    <div className="mx-auto max-w-[1680px] px-4 pt-14 pb-24 sm:px-6 sm:pt-20 sm:pb-32">
       <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[22rem_1fr] lg:gap-12">
         <Reveal className="mx-auto w-full max-w-[22rem] lg:mx-0 lg:max-w-none">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[24px] bg-panel">
@@ -47,23 +47,19 @@ export default function AboutPage() {
               ))}
             </div>
             <div className="space-y-4">
-              {about.paragraphs.slice(2).map((paragraph, i) => (
-                <p
-                  key={i}
-                  className="text-sm leading-relaxed font-light text-ink/90 sm:text-base"
-                >
-                  {paragraph}
-                </p>
-              ))}
               <p className="text-sm leading-relaxed font-light text-ink/90 sm:text-base">
-                Feel free to reach out if you&rsquo;d like to chat about design or explore working together:{" "}
+                {about.paragraphs[2]}
+              </p>
+              <p className="text-sm leading-relaxed font-light text-ink/90 sm:text-base">
+                If you would like to chat about design or explore working
+                together, feel free to reach out via email at{" "}
                 <a
                   href={`mailto:${contact.email}`}
                   className="underline decoration-1 underline-offset-2 hover:text-accent"
                 >
                   {contact.email}
                 </a>
-                ,{" "}
+                , connect with me on{" "}
                 <a
                   href={contact.linkedin}
                   target="_blank"
@@ -72,14 +68,14 @@ export default function AboutPage() {
                 >
                   LinkedIn
                 </a>
-                , or my{" "}
+                , or view my{" "}
                 <a
                   href={contact.resumeHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline decoration-1 underline-offset-2 hover:text-accent"
                 >
-                  resume
+                  Resume
                 </a>
                 .
               </p>
@@ -92,7 +88,7 @@ export default function AboutPage() {
         <Reveal>
           <PhotoCarousel
             photos={about.photos}
-            alt={`${site.name} — life outside of product design`}
+            alt={`${site.name}, life outside of product design`}
           />
         </Reveal>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import type { CaseStudySection } from "./CaseStudySideNav";
-import CaseStudyShell from "./CaseStudyShell";
+import CaseStudyShell, { CaseStudyBody } from "./CaseStudyShell";
 import { CaseStudyLocked } from "./CaseStudyLock";
 import ScrollPlayVideo from "./ScrollPlayVideo";
 import LaptopFrameVideo from "./LaptopFrameVideo";
@@ -22,18 +22,30 @@ export default function IntuitIntelligenceTemplatePreview() {
   return (
     <CaseStudyShell slug="intuit-intelligence-homepage" sections={SECTIONS} lockProcess>
 
+        {/* FLAGSHIP HERO */}
+        <section className="cs-hero">
+          <video
+            src="/intuit-intelligence-homepage/intuit-intelligence-hero-v2.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="h-full w-full object-contain"
+          />
+        </section>
+
+        <CaseStudyBody>
         <div className="flex flex-col gap-10 md:gap-12">
-        {/* HEADER & HERO */}
-        <header id="overview" className="space-y-10 scroll-mt-32">
-          {/* Title & One-Liner */}
+        <header id="overview" className="scroll-mt-32">
           <div className="space-y-4">
-            <h1 className="font-display text-4xl md:text-6xl font-light tracking-tight text-ink leading-[1.1]">
+            <h1 className="font-display text-3xl md:text-5xl font-light tracking-tight text-ink leading-[1.15]">
               Intuit Intelligence
             </h1>
-            <p className="text-lg md:text-xl text-muted max-w-2xl font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-muted max-w-3xl font-light leading-relaxed">
               Improving Intuit Intelligence&rsquo;s entry point to help customers understand the breadth and depth of what the tool can do, and designing insight prompts to include real data from the customer.
             </p>
           </div>
+        </header>
 
           {/* Monospace Metadata Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-border text-xs">
@@ -54,21 +66,6 @@ export default function IntuitIntelligenceTemplatePreview() {
               <span className="text-ink">+13% Adoption</span>
             </div>
           </div>
-        </header>
-
-        {/* FLAGSHIP HERO MEDIA FRAME */}
-        <section className="cs-hero">
-          <div className="cs-figure relative aspect-video overflow-hidden rounded-xl bg-bg">
-              <video
-                src="/intuit-intelligence-homepage/intuit-intelligence-hero-v2.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="absolute inset-0 h-full w-full object-contain"
-              />
-          </div>
-        </section>
         </div>
 
         {/* OVERVIEW & PROBLEM / SOLUTION */}
@@ -76,13 +73,13 @@ export default function IntuitIntelligenceTemplatePreview() {
           <div id="problem" className="space-y-3 scroll-mt-32">
             <h2 className="font-subheading text-xs uppercase tracking-wider text-muted">The Problem</h2>
             <p className="text-ink/80 leading-relaxed text-sm">
-              Users frequently approached the Omni AI panel with &ldquo;tool blindness,&rdquo; treating it as a static, generic FAQ help bot rather than a proactive financial agent. This mindset, paired with a low confidence in natural language querying, resulted in a severe cold-start problem and &ldquo;one-and-done&rdquo; sessions where users struggled to differentiate Omni from standard chatbots.
+              Customers treated the Intuit Intelligence panel as a basic FAQ bot. They didn&rsquo;t realize it works as an active financial agent, one that can automate workflows, flag cash flow risks, and answer direct questions about live books. Among customers who actively used Intuit Intelligence, 39% had at least one workflow it could have automated. That gap in understanding kept customers from typing custom queries at all, and ~63% of customers in the first 30 days abandoned the panel after a single use, never discovering what it could do.
             </p>
           </div>
           <div id="solution" className="space-y-3 scroll-mt-32">
             <h2 className="font-subheading text-xs uppercase tracking-wider text-ink">The Solution</h2>
             <p className="text-ink/80 leading-relaxed text-sm">
-              Highlight and emphasize a framework of insight prompts that tapped into real data from the users, showing ways that people can use Intuit Intelligence as a personal agent and not a help bot.
+              Insight prompts built from each customer&rsquo;s real data, showing concrete ways to use Intuit Intelligence as a personal agent rather than a help bot.
             </p>
           </div>
         </section>
@@ -103,9 +100,9 @@ export default function IntuitIntelligenceTemplatePreview() {
 
         {/* HERO MEDIA (animated) */}
         <section className="space-y-3">
-          <div className="overflow-hidden rounded-xl">
+          <div className="cs-figure overflow-hidden">
             <LaptopFrameVideo
-              frameSrc="/intuit-intelligence-homepage/ii-figma-make-prototype.png"
+              frameSrc="/intuit-intelligence-homepage/ii-macbook-frame.png"
               videoSrc="/intuit-intelligence-homepage/ii-final-design-hero.mp4"
               alt="Meet Intuit Intelligence, your business AI assistant, on a MacBook"
               objectPosition="center top"
@@ -118,16 +115,16 @@ export default function IntuitIntelligenceTemplatePreview() {
         <section id="process-artifacts" className="space-y-8 pt-10 border-t border-border scroll-mt-32">
           <div className="space-y-3">
             <span className="font-subheading text-xs text-muted uppercase tracking-wider">Process Artifacts</span>
-            <h2 className="font-display text-2xl font-light text-ink tracking-tight">The current design was a quick mockup for beta release</h2>
+            <h2 className="font-display text-2xl font-light text-ink tracking-tight">V0: A quick mock-up</h2>
             <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
-              When I joined the project, we&rsquo;d release a V0 of the design, this as a classic search bar with a description and title describing the experience. It also included 4 basic prompts that we got from from top requested and selected prompts in our alpha research. After beta launch, we did another round of research that determined that engagement levels we&rsquo;re lower due to a &ldquo;tool blindness&rdquo; problem: customers thought that this was more of a help bot rather than an intelligent chat, and they weren&rsquo;t sure which questions to ask, leading to drop off.
+              When I joined the project, the team had just released a V0 of the design: a classic search bar with a description and title describing the experience. It also included 4 basic prompts from top requested and selected prompts in the alpha research. After beta launch, I did another round of research that determined that engagement levels were lower due to a &ldquo;tool blindness&rdquo; problem: customers thought that this was more of a help bot rather than an intelligent chat, and they weren&rsquo;t sure which questions to ask, leading to drop off.
             </p>
           </div>
 
           <div className="space-y-3">
-            <div className="overflow-hidden rounded-xl">
+            <div className="cs-figure overflow-hidden">
               <LaptopFrameImage
-                frameSrc="/intuit-intelligence-homepage/ii-figma-make-prototype.png"
+                frameSrc="/intuit-intelligence-homepage/ii-macbook-frame.png"
                 imageSrc="/intuit-intelligence-homepage/ii-v0-beta-desktop.png"
                 alt="The current state design of the landing page"
               />
@@ -142,17 +139,17 @@ export default function IntuitIntelligenceTemplatePreview() {
             <span className="font-subheading text-xs text-muted uppercase tracking-wider">Iterations</span>
             <h2 className="font-display text-2xl font-light text-ink tracking-tight">Type ahead animations left customers with more questions, but less answers</h2>
             <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
-              My first iteration was a type ahead animation that included the top questions from our beta. Feedback from our team and customers was that it was hard to go back through the animation and find the prompt we included. It was also supposed to help draw attention to the Intuit Intelligence panel, but customers we&rsquo;re not drawn to it. I took this feedback and pivoted to new concepts that focused more on providing insights rather than drawing attention with animation.
+              My first iteration was a type ahead animation that included the top questions from our beta. Feedback from our team and customers was that it was hard to go back through the animation and find the prompt I included. It was also supposed to help draw attention to the Intuit Intelligence panel, but customers were not drawn to it. I took this feedback and pivoted to new concepts that focused more on providing insights rather than drawing attention with animation.
             </p>
           </div>
 
           <div className="space-y-3">
-            <div className="cs-figure overflow-hidden rounded-xl">
+            <div className="overflow-hidden">
               <ScrollPlayVideo
                 src="/intuit-intelligence-homepage/typeahead-exploration.mp4"
                 loop
                 controls={false}
-                className="w-full h-auto"
+                className="mx-auto h-auto w-full max-w-[420px]"
               />
             </div>
             <p className="text-xs text-muted text-center">A type-ahead exploration of the Intuit Intelligence panel.</p>
@@ -161,7 +158,7 @@ export default function IntuitIntelligenceTemplatePreview() {
           <div className="space-y-3 pt-2">
             <h3 className="font-subheading text-lg font-light text-ink tracking-tight max-w-3xl">Creating &ldquo;Insight Prompts&rdquo; helped give customers a reason to be invested in the answers</h3>
             <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
-              We landed on the idea of &ldquo;Insight Prompts&rdquo;, generated insights that we&rsquo;re based on real customer data that we&rsquo;re paired with a top asked prompt. It got behind the &ldquo;why&rdquo; of the feature. Customers should care about this feature because it can detect important information about your books or actions needed to take, and provide an answer for how to take that action.
+              I landed on the idea of &ldquo;Insight Prompts&rdquo;, generated insights that were based on real customer data that were paired with a top asked prompt. It got behind the &ldquo;why&rdquo; of the feature. Customers should care about this feature because it can detect important information about your books or actions needed to take, and provide an answer for how to take that action.
             </p>
           </div>
 
@@ -199,9 +196,9 @@ export default function IntuitIntelligenceTemplatePreview() {
           </div>
 
           <div className="space-y-3 pt-2">
-            <h3 className="font-subheading text-lg font-light text-ink tracking-tight max-w-3xl">After initial release, we decided to push it further to show the breadth of questions that can be answered</h3>
+            <h3 className="font-subheading text-lg font-light text-ink tracking-tight max-w-3xl">After initial release, I decided to push it further to show the breadth of questions that can be answered</h3>
             <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
-              After launch, customers said they still weren&rsquo;t fully confident in understanding the breadth of what Intuit Intelligence could do. We ran an A/B test comparing the live design against a new concept. In the end, customers loved having more options and wanted a combination of both: clickable chips that showed the breadth of prompt areas, with different insight prompts under each one.
+              After launch, customers said they still weren&rsquo;t fully confident in understanding the breadth of what Intuit Intelligence could do. I ran an A/B test comparing the live design against a new concept. In the end, customers loved having more options and wanted a combination of both: clickable chips that showed the breadth of prompt areas, with different insight prompts under each one.
             </p>
           </div>
 
@@ -258,7 +255,7 @@ export default function IntuitIntelligenceTemplatePreview() {
           </div>
 
           <div className="space-y-3">
-            <div className="overflow-hidden rounded-xl">
+            <div className="cs-figure overflow-hidden">
               <DesktopFrameVideo
                 frameSrc="/intuit-intelligence-homepage/ii-final-design-hero.png"
                 videoSrc="/intuit-intelligence-homepage/ii-final-design-hero.mp4"
@@ -290,6 +287,7 @@ export default function IntuitIntelligenceTemplatePreview() {
           </ul>
         </section>
         </CaseStudyLocked>
+        </CaseStudyBody>
 
     </CaseStudyShell>
   );

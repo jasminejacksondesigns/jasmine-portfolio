@@ -23,7 +23,7 @@ export default function CoverMedia({
 
   return (
     <PlaceholderMockup
-      caption={`${project.title} — placeholder`}
+      caption={`${project.title}, placeholder`}
       aspect={aspect}
       className={className}
       videoSrc={project.coverVideo}

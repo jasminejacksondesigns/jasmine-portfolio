@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import type { CaseStudySection } from "./CaseStudySideNav";
-import CaseStudyShell from "./CaseStudyShell";
+import CaseStudyShell, { CaseStudyBody } from "./CaseStudyShell";
 import { CaseStudyLocked } from "./CaseStudyLock";
 import IphoneFrameVideo from "./IphoneFrameVideo";
 import ScrollPlayVideo from "./ScrollPlayVideo";
@@ -23,18 +23,29 @@ export default function InvoicingAutomationTemplatePreview() {
   return (
     <CaseStudyShell slug="invoicing-automation" sections={SECTIONS} lockProcess>
 
+        {/* FLAGSHIP HERO */}
+        <section className="cs-hero" style={{ background: "#c8edfc" }}>
+          <ScrollPlayVideo
+            src="/invoicing-automation/invoicing-hero-media.mp4"
+            className="h-full w-full object-contain"
+            style={{ background: "#c8edfc" }}
+            controls={false}
+            once
+          />
+        </section>
+
+        <CaseStudyBody>
         <div className="flex flex-col gap-10 md:gap-12">
-        {/* HEADER & HERO */}
-        <header id="overview" className="space-y-10 scroll-mt-32">
-          {/* Title & One-Liner */}
+        <header id="overview" className="scroll-mt-32">
           <div className="space-y-4">
-            <h1 className="font-display text-4xl md:text-6xl font-light tracking-tight text-ink leading-[1.1]">
+            <h1 className="font-display text-3xl md:text-5xl font-light tracking-tight text-ink leading-[1.15]">
               Invoicing Automation
             </h1>
-            <p className="text-lg md:text-xl text-muted max-w-2xl font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-muted max-w-3xl font-light leading-relaxed">
               Our team&rsquo;s goal was to design and build a working concept of a feature where a business owner can snap and send images using Intuit Intelligence to auto-generate invoices and estimates.
             </p>
           </div>
+        </header>
 
           {/* Monospace Metadata Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-border text-xs">
@@ -55,22 +66,6 @@ export default function InvoicingAutomationTemplatePreview() {
               <span className="text-ink">73% Success Rate</span>
             </div>
           </div>
-        </header>
-
-        {/* FLAGSHIP HERO MEDIA FRAME */}
-        <section className="cs-hero">
-          <div
-            className="cs-figure relative overflow-hidden rounded-xl bg-bg"
-            style={{ aspectRatio: "2560 / 2160" }}
-          >
-            <ScrollPlayVideo
-              src="/invoicing-automation/invoicing-hero-media.mp4"
-              className="h-full w-full object-cover"
-              controls={false}
-              once
-            />
-          </div>
-        </section>
         </div>
 
         {/* OVERVIEW & PROBLEM / SOLUTION */}
@@ -91,7 +86,7 @@ export default function InvoicingAutomationTemplatePreview() {
           <div id="solution" className="space-y-3 scroll-mt-32">
             <h2 className="font-subheading text-xs uppercase tracking-wider text-ink">The Solution</h2>
             <p className="text-ink/80 leading-relaxed text-sm">
-              A concept that captures screenshots, photos, or text message conversations and creates a prefilled invoice from them. Tap Autofill, choose a source, and Intuit Assist drafts the customer, line items, and totals — ready to review before sending.
+              A concept that captures screenshots, photos, or text message conversations and creates a prefilled invoice from them. Tap Autofill, choose a source, and Intuit Assist drafts the customer, line items, and totals, ready to review before sending.
             </p>
           </div>
         </section>
@@ -124,7 +119,7 @@ export default function InvoicingAutomationTemplatePreview() {
           <div className="space-y-3">
             <div className="relative aspect-[5120/2413] cs-figure overflow-hidden rounded-xl">
               <Image
-                src="/invoicing-automation/ia-inspiration-competitive-analysis-v4.png"
+                src="/invoicing-automation/ia-inspiration-competitive-analysis-v5.png"
                 alt="Competitor invoicing apps reviewed for inspiration"
                 fill
                 sizes="(min-width: 768px) 896px, 100vw"
@@ -248,7 +243,7 @@ export default function InvoicingAutomationTemplatePreview() {
           </div>
 
           <blockquote className="border-l-2 border-ink/20 pl-4">
-            <p className="text-sm text-ink/80 italic">&ldquo;If it&rsquo;s hidden, it&rsquo;s forgotten.&rdquo; &mdash; QuickBooks mobile user</p>
+            <p className="text-sm text-ink/80 italic">&ldquo;If it&rsquo;s hidden, it&rsquo;s forgotten.&rdquo; QuickBooks mobile user</p>
             <p className="mt-2 text-xs text-muted">Discoverability of the entry point mattered as much as the AI itself.</p>
           </blockquote>
 
@@ -317,7 +312,7 @@ export default function InvoicingAutomationTemplatePreview() {
                 src="/invoicing-automation/ia-final-voice-sheet-v2.png"
                 alt="Final voice bottom sheet and selection"
                 fill
-                sizes="(min-width: 768px) 1152px, 200vw"
+                sizes="(min-width: 768px) 576px, 100vw"
                 quality={95}
                 unoptimized
                 className="object-contain"
@@ -335,7 +330,7 @@ export default function InvoicingAutomationTemplatePreview() {
           </div>
 
           <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
-            Tap Autofill, choose image or voice, and Intuit Assist drafts the invoice — ready to review before sending. Voice and text capture extended the same pattern: a light green pulse shows the app is listening, and a bottom sheet lets people choose their source.
+            Tap Autofill, choose image or voice, and Intuit Assist drafts the invoice, ready to review before sending. Voice and text capture extended the same pattern: a light green pulse shows the app is listening, and a bottom sheet lets people choose their source.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 items-start">
@@ -366,7 +361,7 @@ export default function InvoicingAutomationTemplatePreview() {
               <strong className="text-ink">Simplify what&rsquo;s known:</strong> auditing the existing receipt-capture pattern let design energy go toward the unknown challenges of AI, not reinventing solved problems.
             </li>
             <li>
-              <strong className="text-ink">The best design isn&rsquo;t the flashiest:</strong> the instinct after the hackathon was to carry over an elaborate motion design — what actually helped users was simpler and easier to use.
+              <strong className="text-ink">The best design isn&rsquo;t the flashiest:</strong> the instinct after the hackathon was to carry over an elaborate motion design. What actually helped users was simpler and easier to use.
             </li>
             <li>
               <strong className="text-ink">Design for scale:</strong> voice, batch upload, and Siri Shortcuts followed the same pattern after launch.
@@ -374,6 +369,7 @@ export default function InvoicingAutomationTemplatePreview() {
           </ul>
         </section>
         </CaseStudyLocked>
+        </CaseStudyBody>
 
     </CaseStudyShell>
   );

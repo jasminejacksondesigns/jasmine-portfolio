@@ -109,10 +109,10 @@ export default function InvoiceAutomationEditorial() {
         </Link>
       </div>
 
-      {/* 01 — Hero */}
+      {/* 01. Hero */}
       <section className="flex flex-col items-start gap-8 pt-10 pb-0 sm:pt-14">
         <div className="mx-auto w-full max-w-[1120px] px-6 sm:px-10">
-          <Eyebrow>CASE STUDY — 01</Eyebrow>
+          <Eyebrow>CASE STUDY 01</Eyebrow>
           <h1 className="font-display mt-6 text-[15vw] leading-[0.95] font-light tracking-tight text-black sm:text-[6.5rem] lg:text-[108px]">
             Invoice
             <br />
@@ -133,7 +133,7 @@ export default function InvoiceAutomationEditorial() {
             </div>
             <div className="flex min-w-[260px] flex-col gap-2">
               <p className="font-subheading text-xs font-normal text-[#8c8c8c]">COMPANY</p>
-              <p className="text-base text-black">QuickBooks — AI Acceleration Team</p>
+              <p className="text-base text-black">QuickBooks AI Acceleration Team</p>
             </div>
           </div>
         </div>
@@ -151,12 +151,12 @@ export default function InvoiceAutomationEditorial() {
         </div>
       </section>
 
-      {/* 02 — The Brief */}
+      {/* 02. The Brief */}
       <Section bg="tint">
         <Heading>The Brief</Heading>
         <Body>
           Business owners needed a faster way to turn a photo, a text, or a
-          voice memo into a ready-to-send invoice — without the manual,
+          voice memo into a ready-to-send invoice, without the manual,
           field-by-field entry that made mobile invoicing feel like a chore.
         </Body>
         <div className="mx-auto w-full max-w-[380px]">
@@ -170,13 +170,13 @@ export default function InvoiceAutomationEditorial() {
         <Caption>Today: manual entry, one field at a time</Caption>
       </Section>
 
-      {/* 03 — Week One: The Hackathon */}
+      {/* 03. Week One: The Hackathon */}
       <Section>
-        <Heading>Week One — The Hackathon</Heading>
+        <Heading>Week One: The Hackathon</Heading>
         <Body>
           I partnered with a PM for a one-week hackathon, starting from the
           existing mobile invoicing flow before pushing into a bolder, more
-          ambitious direction — capturing photos, screenshots, and text
+          ambitious direction, capturing photos, screenshots, and text
           threads to auto-generate a full invoice.
         </Body>
         <Shot
@@ -198,10 +198,10 @@ export default function InvoiceAutomationEditorial() {
         </blockquote>
 
         <div className="flex flex-col gap-3 text-lg text-black sm:text-xl">
-          <p>— Users need to verify AI accuracy before trusting it.</p>
-          <p>— First-time trust needs strong, clear education.</p>
-          <p>— Show the source photo next to the generated invoice.</p>
-          <p>— Don&rsquo;t collect more than what&rsquo;s in the photo.</p>
+          <p>Users need to verify AI accuracy before trusting it.</p>
+          <p>First-time trust needs strong, clear education.</p>
+          <p>Show the source photo next to the generated invoice.</p>
+          <p>Don&rsquo;t collect more than what&rsquo;s in the photo.</p>
         </div>
 
         <div className="w-full">
@@ -212,13 +212,13 @@ export default function InvoiceAutomationEditorial() {
         </div>
       </Section>
 
-      {/* 04 — From Hackathon to Product */}
+      {/* 04. From Hackathon to Product */}
       <Section bg="tint">
         <Heading>From Hackathon to Product</Heading>
         <Body>
-          Moving into implementation, I explored entry points — a floating
+          Moving into implementation, I explored entry points, a floating
           action button, a button on the invoice itself, or a new flow
-          entirely — while planning for partial suggestions and multiple
+          entirely, while planning for partial suggestions and multiple
           images.
         </Body>
         <Shot
@@ -242,13 +242,13 @@ export default function InvoiceAutomationEditorial() {
         <Caption>Two directions tested in research</Caption>
       </Section>
 
-      {/* 07 — Expanding to Voice & Text */}
+      {/* 07. Expanding to Voice & Text */}
       <Section>
         <Heading>Expanding to Voice &amp; Text</Heading>
         <div className="flex flex-col gap-3 text-lg text-black sm:text-xl">
-          <p>— Added a mode to edit auto-populated text or add templates.</p>
-          <p>— A light green pulse shows the app is listening.</p>
-          <p>— Choose image or voice from a bottom sheet.</p>
+          <p>Added a mode to edit auto-populated text or add templates.</p>
+          <p>A light green pulse shows the app is listening.</p>
+          <p>Choose image or voice from a bottom sheet.</p>
         </div>
         <Shot
           src="/invoicing-automation/invoicing-autofill-sample.png"
@@ -265,12 +265,12 @@ export default function InvoiceAutomationEditorial() {
         </div>
       </Section>
 
-      {/* 05 — The Final Design */}
+      {/* 05. The Final Design */}
       <Section bg="tint">
         <Heading>The Final Design</Heading>
         <Body>
           Tap Autofill, choose image or voice, and Intuit Assist drafts the
-          invoice — customer, line items, and totals — ready to review before
+          invoice, customer, line items, and totals, ready to review before
           sending.
         </Body>
         <div className="w-full">
@@ -282,7 +282,7 @@ export default function InvoiceAutomationEditorial() {
         </div>
       </Section>
 
-      {/* 06 — Results */}
+      {/* 06. Results */}
       <Section>
         <Heading>Results</Heading>
         <div className="flex w-full flex-col gap-6 sm:flex-row">
@@ -299,17 +299,17 @@ export default function InvoiceAutomationEditorial() {
         </div>
       </Section>
 
-      {/* 08 — What I Learned */}
+      {/* 08. What I Learned */}
       <Section bg="tint">
         <Heading>What I Learned</Heading>
         <div className="flex max-w-[900px] flex-col gap-4 text-xl text-black sm:text-2xl">
           <p>Simplify what&rsquo;s known so you can focus on what&rsquo;s new.</p>
           <p>
-            The best design is the one that&rsquo;s easiest to use — not the
+            The best design is the one that&rsquo;s easiest to use, not the
             flashiest.
           </p>
           <p>
-            Build for scale — voice, batch upload, and Siri Shortcuts came
+            Build for scale, voice, batch upload, and Siri Shortcuts came
             next.
           </p>
         </div>
