@@ -25,14 +25,13 @@ export default function MobileSalesModernizationTemplatePreview() {
 
         {/* FLAGSHIP HERO */}
         <section className="cs-hero" style={{ background: "#b8dbb6" }}>
-          <video
+          <ScrollPlayVideo
             src="/mobile-sales-modernization/msm-hero-video.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
             className="h-full w-full object-contain"
             style={{ background: "#b8dbb6" }}
+            controls={false}
+            once
+            waitForScroll
           />
         </section>
 
@@ -202,9 +201,9 @@ export default function MobileSalesModernizationTemplatePreview() {
           </div>
 
           <div className="space-y-3">
-            <div className="relative aspect-[1024/416] cs-figure overflow-hidden rounded-xl">
+            <div className="relative aspect-[2432/990] cs-figure overflow-hidden rounded-xl">
               <Image
-                src="/mobile-sales-modernization/msm-flow-sales-receipt-diagram-v4.png"
+                src="/mobile-sales-modernization/msm-flow-sales-receipt-diagram-v6.png"
                 alt="Current workflow for Sales Receipt"
                 fill
                 sizes="(min-width: 768px) 896px, 100vw"

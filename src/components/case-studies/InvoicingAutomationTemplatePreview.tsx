@@ -31,6 +31,7 @@ export default function InvoicingAutomationTemplatePreview() {
             style={{ background: "#c8edfc" }}
             controls={false}
             once
+            waitForScroll
           />
         </section>
 
