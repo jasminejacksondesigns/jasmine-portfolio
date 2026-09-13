@@ -41,7 +41,7 @@ export default function IntuitIntelligenceTemplatePreview() {
             <h1 className="font-display text-3xl md:text-5xl font-light tracking-tight text-ink leading-[1.15]">
               Intuit Intelligence
             </h1>
-            <p className="text-lg md:text-xl text-muted max-w-3xl font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-muted font-light leading-relaxed">
               Improving Intuit Intelligence&rsquo;s entry point to help customers understand the breadth and depth of what the tool can do, and designing insight prompts to include real data from the customer.
             </p>
           </div>
@@ -116,7 +116,7 @@ export default function IntuitIntelligenceTemplatePreview() {
           <div className="space-y-3">
             <span className="font-subheading text-xs text-muted uppercase tracking-wider">Process Artifacts</span>
             <h2 className="font-display text-2xl font-light text-ink tracking-tight">V0: A quick mock-up</h2>
-            <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+            <p className="text-ink/80 leading-relaxed text-sm">
               When I joined the project, the team had just released a V0 of the design: a classic search bar with a description and title describing the experience. It also included 4 basic prompts from top requested and selected prompts in the alpha research. After beta launch, I did another round of research that determined that engagement levels were lower due to a &ldquo;tool blindness&rdquo; problem: customers thought that this was more of a help bot rather than an intelligent chat, and they weren&rsquo;t sure which questions to ask, leading to drop off.
             </p>
           </div>
@@ -138,7 +138,7 @@ export default function IntuitIntelligenceTemplatePreview() {
           <div className="space-y-3">
             <span className="font-subheading text-xs text-muted uppercase tracking-wider">Iterations</span>
             <h2 className="font-display text-2xl font-light text-ink tracking-tight">Type ahead animations left customers with more questions, but less answers</h2>
-            <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+            <p className="text-ink/80 leading-relaxed text-sm">
               My first iteration was a type ahead animation that included the top questions from our beta. Feedback from our team and customers was that it was hard to go back through the animation and find the prompt I included. It was also supposed to help draw attention to the Intuit Intelligence panel, but customers were not drawn to it. I took this feedback and pivoted to new concepts that focused more on providing insights rather than drawing attention with animation.
             </p>
           </div>
@@ -156,8 +156,8 @@ export default function IntuitIntelligenceTemplatePreview() {
           </div>
 
           <div className="space-y-3 pt-2">
-            <h3 className="font-subheading text-lg font-light text-ink tracking-tight max-w-3xl">Creating &ldquo;Insight Prompts&rdquo; helped give customers a reason to be invested in the answers</h3>
-            <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+            <h3 className="font-subheading text-lg font-light text-ink tracking-tight">Creating &ldquo;Insight Prompts&rdquo; helped give customers a reason to be invested in the answers</h3>
+            <p className="text-ink/80 leading-relaxed text-sm">
               I landed on the idea of &ldquo;Insight Prompts&rdquo;, generated insights that were based on real customer data that were paired with a top asked prompt. It got behind the &ldquo;why&rdquo; of the feature. Customers should care about this feature because it can detect important information about your books or actions needed to take, and provide an answer for how to take that action.
             </p>
           </div>
@@ -176,8 +176,8 @@ export default function IntuitIntelligenceTemplatePreview() {
           </div>
 
           <div className="space-y-3 pt-2">
-            <h3 className="font-subheading text-lg font-light text-ink tracking-tight max-w-3xl">Creating the master component for teams to implement the design</h3>
-            <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+            <h3 className="font-subheading text-lg font-light text-ink tracking-tight">Creating the master component for teams to implement the design</h3>
+            <p className="text-ink/80 leading-relaxed text-sm">
               Our team was the host of a new AI design system library along with creating new designs. When I complete designs, I add a new master component to the library for other designers and partner teams to use.
             </p>
           </div>
@@ -196,8 +196,8 @@ export default function IntuitIntelligenceTemplatePreview() {
           </div>
 
           <div className="space-y-3 pt-2">
-            <h3 className="font-subheading text-lg font-light text-ink tracking-tight max-w-3xl">After initial release, I decided to push it further to show the breadth of questions that can be answered</h3>
-            <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+            <h3 className="font-subheading text-lg font-light text-ink tracking-tight">After initial release, I decided to push it further to show the breadth of questions that can be answered</h3>
+            <p className="text-ink/80 leading-relaxed text-sm">
               After launch, customers said they still weren&rsquo;t fully confident in understanding the breadth of what Intuit Intelligence could do. I ran an A/B test comparing the live design against a new concept. In the end, customers loved having more options and wanted a combination of both: clickable chips that showed the breadth of prompt areas, with different insight prompts under each one.
             </p>
           </div>
@@ -229,7 +229,7 @@ export default function IntuitIntelligenceTemplatePreview() {
           </div>
 
           <div className="space-y-3 pt-2">
-            <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+            <p className="text-ink/80 leading-relaxed text-sm">
               I tested the full interactions of the design using Figma Make.
             </p>
           </div>

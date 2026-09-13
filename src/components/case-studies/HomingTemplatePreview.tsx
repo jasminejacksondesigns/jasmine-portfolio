@@ -35,7 +35,7 @@ export default function HomingTemplatePreview() {
             <h1 className="font-display text-3xl md:text-5xl font-light tracking-tight text-ink leading-[1.15]">
               Homing
             </h1>
-            <p className="text-lg md:text-xl text-muted max-w-3xl font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-muted font-light leading-relaxed">
               A make-a-thon project that turns travel moments into shareable magnets.
             </p>
           </div>

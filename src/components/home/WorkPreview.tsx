@@ -10,22 +10,47 @@ function projectMeta(project: CaseStudy) {
 
 const bySlug = (slug: string) => caseStudies.find((c) => c.slug === slug)!;
 
-const leftColumn = [
-  { video: "/work/mockups/intuit-intelligence-hero.mp4", aspect: 2.05, fit: "cover" as const, project: bySlug("intuit-intelligence-homepage"), bg: "bg-[#eef2ea]" },
-  { aspect: 1.55, fit: "contain" as const, project: bySlug("accounting-agent"), requestMoreInfo: true, bg: "bg-[#cfe3f7]", padded: true },
-  { src: "/work/mockups/realme-10-v2.png", aspect: 1.72, fit: "contain" as const, project: bySlug("mobile-sales-modernization"), bg: "bg-[#c7ecfc]" },
-];
+const intuitIntelligence = {
+  video: "/work/mockups/intuit-intelligence-hero.mp4",
+  aspect: 2.05,
+  fit: "cover" as const,
+  project: bySlug("intuit-intelligence-homepage"),
+  bg: "bg-[#eef2ea]",
+};
 
-const rightColumn = [
-  { src: "/work/mockups/iphone-14-v2.png", aspect: 2200 / 3246, fit: "contain" as const, project: bySlug("invoicing-automation"), bg: "bg-[#aed3ab]", padClass: "p-10 sm:p-16" },
-  {
-    video: "/homing/homing.mp4",
-    aspect: 1.44,
-    fit: "cover" as const,
-    project: bySlug("homing"),
-    bg: "bg-[#8fc9e8]",
-  },
-];
+const accountingAgent = {
+  aspect: 1.55,
+  fit: "contain" as const,
+  project: bySlug("accounting-agent"),
+  requestMoreInfo: true,
+  bg: "bg-[#cfe3f7]",
+  padded: true,
+};
+
+const mobileSales = {
+  src: "/work/mockups/realme-10-v2.png",
+  aspect: 1.72,
+  fit: "contain" as const,
+  project: bySlug("mobile-sales-modernization"),
+  bg: "bg-[#c7ecfc]",
+};
+
+const invoicing = {
+  src: "/work/mockups/iphone-14-v2.png",
+  aspect: 2200 / 3246,
+  fit: "contain" as const,
+  project: bySlug("invoicing-automation"),
+  bg: "bg-[#aed3ab]",
+  padClass: "p-10 sm:p-16",
+};
+
+const homing = {
+  video: "/homing/homing.mp4",
+  aspect: 1.44,
+  fit: "cover" as const,
+  project: bySlug("homing"),
+  bg: "bg-[#8fc9e8]",
+};
 
 function MockupTile({
   src,
@@ -38,6 +63,7 @@ function MockupTile({
   bg,
   padded,
   padClass,
+  fill = false,
   className = "",
 }: {
   src?: string;
@@ -50,15 +76,24 @@ function MockupTile({
   bg: string;
   padded?: boolean;
   padClass?: string;
+  fill?: boolean;
   className?: string;
 }) {
   return (
-    <Reveal delay={delay} className={className}>
-      <Link href={`/work/${project.slug}`} className="group block w-full">
-        <div className={`overflow-hidden rounded-2xl ${bg}`}>
+    <Reveal
+      delay={delay}
+      className={`${fill ? "flex min-h-0 flex-1 flex-col max-lg:flex-none" : ""} ${className}`.trim()}
+    >
+      <Link
+        href={`/work/${project.slug}`}
+        className={`group block w-full ${fill ? "flex h-full min-h-0 flex-col max-lg:block max-lg:h-auto" : ""}`}
+      >
+        <div
+          className={`overflow-hidden rounded-2xl ${bg} ${fill ? "min-h-0 flex-1 max-lg:flex-none" : ""}`}
+        >
           <div
-            className="relative w-full overflow-hidden"
-            style={{ aspectRatio: aspect }}
+            className={`relative w-full overflow-hidden aspect-[var(--tile-aspect)] ${fill ? "lg:aspect-auto lg:h-full" : ""}`}
+            style={{ ["--tile-aspect" as string]: String(aspect) }}
           >
             <div
               className={`absolute inset-0 transition-transform duration-500 group-hover:scale-[1.03] ${padClass ?? (padded ? "p-6 sm:p-10" : "")}`}
@@ -110,25 +145,22 @@ export default function WorkPreview() {
       <div className="mx-auto max-w-[1680px] px-4 pb-24 sm:px-6 sm:pb-32">
         <h2 className="sr-only">Work</h2>
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1.2fr_1fr] lg:items-stretch">
-          <div className="flex flex-col gap-6 lg:h-full">
-            {leftColumn.map((tile, i) => (
-              <MockupTile
-                key={tile.project.slug}
-                {...tile}
-                delay={0.05 * i}
-              />
-            ))}
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1.2fr_1fr] lg:grid-rows-[auto_auto]">
+          <div className="order-1 flex min-h-0 flex-col gap-6 lg:order-none lg:col-start-1 lg:row-start-1 lg:h-full">
+            <MockupTile {...intuitIntelligence} delay={0} />
+            <MockupTile {...accountingAgent} delay={0.05} fill />
           </div>
-          <div className="flex flex-col gap-6 lg:h-full">
-            {rightColumn.map((tile, i) => (
-              <MockupTile
-                key={tile.project.slug}
-                {...tile}
-                delay={0.05 * (i + 1)}
-                className={i === rightColumn.length - 1 ? "lg:mt-auto" : ""}
-              />
-            ))}
+
+          <div className="order-3 lg:order-none lg:col-start-2 lg:row-start-1">
+            <MockupTile {...invoicing} delay={0.05} />
+          </div>
+
+          <div className="order-2 lg:order-none lg:col-start-1 lg:row-start-2 lg:self-end">
+            <MockupTile {...mobileSales} delay={0.1} />
+          </div>
+
+          <div className="order-4 lg:order-none lg:col-start-2 lg:row-start-2 lg:self-end">
+            <MockupTile {...homing} delay={0.15} />
           </div>
         </div>
       </div>

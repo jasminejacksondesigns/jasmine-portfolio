@@ -43,7 +43,7 @@ export default function MobileSalesModernizationTemplatePreview() {
             <h1 className="font-display text-3xl md:text-5xl font-light tracking-tight text-ink leading-[1.15]">
               Mobile Sales Modernization
             </h1>
-            <p className="text-lg md:text-xl text-muted max-w-3xl font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-muted font-light leading-relaxed">
               Redesigning QuickBooks Mobile&rsquo;s Sales Receipt and Receive Payment so they feel like one consistent product, built on a new shared component library.
             </p>
           </div>
@@ -173,7 +173,7 @@ export default function MobileSalesModernizationTemplatePreview() {
           <div className="space-y-3">
             <span className="font-subheading text-xs text-muted uppercase tracking-wider">Key Flows</span>
             <h2 className="font-display text-2xl font-light text-ink tracking-tight">Current State</h2>
-            <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+            <p className="text-ink/80 leading-relaxed text-sm">
               My scope of the sales modernization work included using the new components to redesign Sales Receipts and Receive Payment Forms. Both of these forms were in the &ldquo;classic&rdquo; experience, and required additional features in order to bring them to parity with what was in the web version.
             </p>
           </div>
@@ -196,15 +196,15 @@ export default function MobileSalesModernizationTemplatePreview() {
           <div className="space-y-3">
             <span className="font-subheading text-xs text-muted uppercase tracking-wider">Key Flows</span>
             <h2 className="font-display text-2xl font-light text-ink tracking-tight">Comparing Receive Payment and Sales Receipt</h2>
-            <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+            <p className="text-ink/80 leading-relaxed text-sm">
               My first step to the process was looking at the current sales receipt and receive payment flows to see where there are consistencies and where each may need their own individual sections and components.
             </p>
           </div>
 
           <div className="space-y-3">
-            <div className="relative aspect-[5184/1552] cs-figure overflow-hidden rounded-xl">
+            <div className="relative aspect-[1024/416] cs-figure overflow-hidden rounded-xl">
               <Image
-                src="/mobile-sales-modernization/msm-flow-sales-receipt-diagram-v3.png"
+                src="/mobile-sales-modernization/msm-flow-sales-receipt-diagram-v4.png"
                 alt="Current workflow for Sales Receipt"
                 fill
                 sizes="(min-width: 768px) 896px, 100vw"
@@ -235,12 +235,12 @@ export default function MobileSalesModernizationTemplatePreview() {
           <div className="space-y-3">
             <span className="font-subheading text-xs text-muted uppercase tracking-wider">Design Decisions</span>
             <h2 className="font-display text-2xl font-light text-ink tracking-tight">Iterations</h2>
-            <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+            <p className="text-ink/80 leading-relaxed text-sm">
               I went through several rounds of design iterations to determine the final design.
             </p>
           </div>
 
-          <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+          <p className="text-ink/80 leading-relaxed text-sm">
             This example zeros in on a flow that I redesigned for Sales Receipt details. Other flows that were designed were, adding/editing payments, adding payment methods, and editing the deposit location. The existing framework was there (a main edit page that opens up to a specific workflow when a section is clicked). But I needed to determine exactly what was going into that workflow, how many clicks and how much detail would exist, and what should go in each section on the main page, and the hierarchy of each section.
           </p>
 
@@ -258,10 +258,10 @@ export default function MobileSalesModernizationTemplatePreview() {
             <p className="text-xs text-muted">Lo-fidelity designs for Sales Receipt.</p>
           </div>
 
-          <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+          <p className="text-ink/80 leading-relaxed text-sm">
             At the mid-fidelity stage, I started to experiment with components in our QBDS library. I iterated on several ways that the interaction could be displayed.
           </p>
-          <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+          <p className="text-ink/80 leading-relaxed text-sm">
             An example is the payment method workflow. I decided in the conceptual stage that it would have a separate field to select the payment method, but I needed to determine how that payment method would be selected. I decided to go with the list of payment methods where a person could just select the payment method instead of an input field. That way there would be less clicks and less bottom sheets to go through to make a selection.
           </p>
 
@@ -279,7 +279,7 @@ export default function MobileSalesModernizationTemplatePreview() {
             <p className="text-xs text-muted">Two iterations for payment method selection.</p>
           </div>
 
-          <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+          <p className="text-ink/80 leading-relaxed text-sm">
             One crucial part of this project was that it was being used as a first use case for our new QBDS iOS mobile component library. As I was working, I was workshopping and discussing with the QBDS team on what components were needed in order to fit this use case. This resulted in a decent period of time where my designs were in mid-fidelity while waiting for components to be completed.
           </p>
 
@@ -301,7 +301,7 @@ export default function MobileSalesModernizationTemplatePreview() {
           <div className="space-y-3">
             <span className="font-subheading text-xs text-muted uppercase tracking-wider">Design Decisions</span>
             <h2 className="font-display text-2xl font-light text-ink tracking-tight">Research</h2>
-            <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+            <p className="text-ink/80 leading-relaxed text-sm">
               Along with a redesign, I also gathered research to understand how the new components were being perceived by users.
             </p>
           </div>
@@ -357,12 +357,12 @@ export default function MobileSalesModernizationTemplatePreview() {
           <div className="space-y-3">
             <span className="font-subheading text-xs text-muted uppercase tracking-wider">Design Decisions</span>
             <h2 className="font-display text-2xl font-light text-ink tracking-tight">Design System Contributions</h2>
-            <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+            <p className="text-ink/80 leading-relaxed text-sm">
               &ldquo;Hero Amount&rdquo; was created to solve the problem of calculating the total payment of a user for a Receive Payment, while also allowing them to select and edit invoices on the same page.
             </p>
           </div>
 
-          <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+          <p className="text-ink/80 leading-relaxed text-sm">
             For the Receive Payment form, changing the design to the new ReThink components, while still providing the same ease of use was a bit more challenging. In the old form, users could create edit and save the form all in one page. Now, the interaction pattern was more scalable, but created more steps for the user. I needed to determine a way to create a pattern that balanced simplicity and functionality. In order to do this, it was decided that a new component needed to be designed.
           </p>
 
@@ -413,20 +413,22 @@ export default function MobileSalesModernizationTemplatePreview() {
             <h2 className="font-display text-2xl font-light text-ink tracking-tight">What Shipped</h2>
           </div>
 
-          <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+          <p className="text-ink/80 leading-relaxed text-sm">
             The shipped experience unified Sales Receipt and Receive Payment on the new shared component library, with &ldquo;Hero Amount&rdquo; solving Receive Payment&rsquo;s balance-and-invoice-editing tension in a single view.
           </p>
 
           <div className="space-y-3">
-            <div className="relative aspect-[4048/2640] cs-figure overflow-hidden rounded-xl">
-              <Image
-                src="/mobile-sales-modernization/msm-sales-receipt-final-v2.png"
-                alt="Final Sales Receipt design"
-                fill
-                sizes="(min-width: 768px) 896px, 100vw"
-                unoptimized
-                className="object-contain"
-              />
+            <div className="mx-auto w-full max-w-2xl">
+              <div className="relative aspect-[4048/2640] cs-figure overflow-hidden rounded-xl">
+                <Image
+                  src="/mobile-sales-modernization/msm-sales-receipt-final-v2.png"
+                  alt="Final Sales Receipt design"
+                  fill
+                  sizes="(min-width: 768px) 672px, 100vw"
+                  unoptimized
+                  className="object-contain"
+                />
+              </div>
             </div>
             <p className="text-xs text-muted">Final Sales Receipt design.</p>
           </div>

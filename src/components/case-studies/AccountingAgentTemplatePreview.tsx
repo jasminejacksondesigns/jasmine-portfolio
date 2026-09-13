@@ -37,7 +37,7 @@ export default function AccountingAgentTemplatePreview() {
             <h1 className="font-display text-3xl md:text-5xl font-light tracking-tight text-ink leading-[1.15]">
               Accounting Agent
             </h1>
-            <p className="text-lg md:text-xl text-muted max-w-3xl font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-muted font-light leading-relaxed">
               An AI-native way for accountants and small business owners to resolve missing transaction details, without the email back-and-forth.
             </p>
           </div>
@@ -106,7 +106,7 @@ export default function AccountingAgentTemplatePreview() {
             <h2 className="font-display text-2xl font-light text-ink tracking-tight">What Beta Research Changed</h2>
           </div>
 
-          <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+          <p className="text-ink/80 leading-relaxed text-sm">
             The first pass had no shared components and was built mobile-first, with completely separate experiences for accountants and their clients. It worked, but had no visual polish, and accountants specifically asked for a grid view so they could see and edit many transactions at once.
           </p>
 
@@ -125,7 +125,7 @@ export default function AccountingAgentTemplatePreview() {
           </div>
 
           <div className="space-y-3 pt-2">
-            <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+            <p className="text-ink/80 leading-relaxed text-sm">
               Our UX researcher ran interviews with beta users, and we prioritized what we heard back into the design:
             </p>
             <ul className="space-y-3 text-sm text-ink/80">
@@ -156,7 +156,7 @@ export default function AccountingAgentTemplatePreview() {
             <h2 className="font-display text-2xl font-light text-ink tracking-tight">Specific Guidance, Not Generic Prompts</h2>
           </div>
 
-          <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+          <p className="text-ink/80 leading-relaxed text-sm">
             Looking at how other tools handled similar transaction-and-messaging pairings informed the chart model, placing the transaction question side by side with the message thread, rather than as two disconnected views. The AI&rsquo;s guidance itself was written to be specific, not generic:
           </p>
 
@@ -185,7 +185,7 @@ export default function AccountingAgentTemplatePreview() {
             <h2 className="font-display text-2xl font-light text-ink tracking-tight">What Shipped</h2>
           </div>
 
-          <p className="text-ink/80 leading-relaxed text-sm max-w-3xl">
+          <p className="text-ink/80 leading-relaxed text-sm">
             A Magic Link system lets SMBs receive an email with a contextual link that drops them directly into the relevant transaction thread. Because multiple people in a firm might access the portal, a settings panel lets each person add their email to get notified when new activity happens.
           </p>
 
