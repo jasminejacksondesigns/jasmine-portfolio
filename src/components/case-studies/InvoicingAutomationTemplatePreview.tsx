@@ -64,7 +64,7 @@ export default function InvoicingAutomationTemplatePreview() {
             </div>
             <div>
               <span className="font-subheading text-muted block mb-1">CORE OUTCOME</span>
-              <span className="text-ink">73% Success Rate</span>
+              <span className="text-ink">69.5% Completion Rate</span>
             </div>
           </div>
         </div>
@@ -95,14 +95,14 @@ export default function InvoicingAutomationTemplatePreview() {
         {/* METRICS ROW */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
-            <div className="font-display text-3xl font-light text-ink tracking-tight">73%</div>
-            <div className="text-xs text-muted">Success Rate</div>
-            <p className="text-xs text-muted pt-1">Success rate from start to completion across the capture-to-invoice flow.</p>
+            <div className="font-display text-3xl font-light text-ink tracking-tight">232K+</div>
+            <div className="text-xs text-muted">Views</div>
+            <p className="text-xs text-muted pt-1">Views across invoice and estimate autofill after both launched GA in Nov 2024.</p>
           </div>
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
-            <div className="font-display text-3xl font-light text-ink tracking-tight">1st</div>
-            <div className="text-xs text-muted">AI-Native Feature</div>
-            <p className="text-xs text-muted pt-1">The first AI-native feature shipped in QuickBooks Mobile.</p>
+            <div className="font-display text-3xl font-light text-ink tracking-tight">69.5%</div>
+            <div className="text-xs text-muted">Completion Rate</div>
+            <p className="text-xs text-muted pt-1">Completion rate across QuickBooks&rsquo; first AI-powered mobile features.</p>
           </div>
         </section>
 

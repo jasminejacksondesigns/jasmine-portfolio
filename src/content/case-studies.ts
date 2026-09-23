@@ -43,8 +43,8 @@ export const caseStudies: CaseStudy[] = [
     featured: true,
     coverImage: "/invoicing-automation/invoicing-hero.avif",
     cardStats: [
-      { value: "73%", label: "Success rate, start to completion" },
-      { value: "1st", label: "AI-native feature in QuickBooks Mobile" },
+      { value: "232K+", label: "Views since GA launch" },
+      { value: "69.5%", label: "Completion rate" },
     ],
     content: [
       {
@@ -132,8 +132,8 @@ export const caseStudies: CaseStudy[] = [
       {
         type: "stats",
         items: [
-          { value: "73%", label: "Success rate of start to completion" },
-          { value: "1st", label: "AI native feature in QuickBooks Mobile" },
+          { value: "232K+", label: "Views since GA launch" },
+          { value: "69.5%", label: "Completion rate" },
         ],
       },
       { type: "subheading", text: "Learnings" },
@@ -154,7 +154,7 @@ export const caseStudies: CaseStudy[] = [
     tools: ["Figma", "Cursor", "Claude"],
     coverImage: "/intuit-intelligence-homepage/ii-hero.jpg",
     cardStats: [
-      { value: "13%", label: "Gain in adoption" },
+      { value: "6% → 17%", label: "Projected adoption and conversation quality" },
       { value: "5", label: "Partner teams created prompts" },
     ],
     content: [
@@ -227,7 +227,7 @@ export const caseStudies: CaseStudy[] = [
       {
         type: "stats",
         items: [
-          { value: "13%", label: "Gains in adoption" },
+          { value: "6% → 17%", label: "Projected adoption and conversation quality" },
           { value: "5", label: "Partner teams created prompts" },
         ],
       },
@@ -332,8 +332,8 @@ export const caseStudies: CaseStudy[] = [
     tools: ["Figma", "Usertesting"],
     coverAnimation: "qb",
     cardStats: [
-      { value: "91%", label: "Positive voice of customer" },
-      { value: "0→1", label: "New product in 12 weeks" },
+      { value: "92%", label: "Conversation success rate" },
+      { value: "46%", label: "Recommendation take rate" },
     ],
     content: [
       {
@@ -403,8 +403,8 @@ export const caseStudies: CaseStudy[] = [
       {
         type: "stats",
         items: [
-          { value: "91%", label: "Positive voice of customer" },
-          { value: "0→1", label: "New product in 12 weeks" },
+          { value: "92%", label: "Conversation success rate" },
+          { value: "46%", label: "Recommendation take rate" },
         ],
       },
       { type: "subheading", text: "Learnings" },
@@ -554,7 +554,7 @@ export const caseStudies: CaseStudy[] = [
     coverVideo: "/homing/homing.mp4",
     liveUrl: "https://homing-phi.vercel.app/",
     cardStats: [
-      { value: "2.5 hrs", label: "Idea to working product" },
+      { value: "2 hrs", label: "Idea to working product" },
       { value: "100%", label: "AI-native design, agents only" },
     ],
     content: [
@@ -598,7 +598,7 @@ export const caseStudies: CaseStudy[] = [
       {
         type: "stats",
         items: [
-          { value: "2.5 hrs", label: "Idea to working product" },
+          { value: "2 hrs", label: "Idea to working product" },
           { value: "100%", label: "AI-native design, agents only" },
         ],
       },

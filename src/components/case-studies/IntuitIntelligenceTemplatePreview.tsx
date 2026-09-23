@@ -64,7 +64,7 @@ export default function IntuitIntelligenceTemplatePreview() {
             </div>
             <div>
               <span className="font-subheading text-muted block mb-1">CORE OUTCOME</span>
-              <span className="text-ink">+13% Adoption</span>
+              <span className="text-ink">6% → 17% Projected Adoption</span>
             </div>
           </div>
         </div>
@@ -88,9 +88,9 @@ export default function IntuitIntelligenceTemplatePreview() {
         {/* METRICS ROW */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
-            <div className="font-display text-3xl font-light text-ink tracking-tight">13%</div>
-            <div className="text-xs text-muted">Gain in Adoption</div>
-            <p className="text-xs text-muted pt-1">Increase in adoption of Intuit Intelligence following the redesigned entry point.</p>
+            <div className="font-display text-3xl font-light text-ink tracking-tight">6% → 17%</div>
+            <div className="text-xs text-muted">Projected Adoption</div>
+            <p className="text-xs text-muted pt-1">Projected lift in adoption and conversation quality from the redesigned first-time experience.</p>
           </div>
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
             <div className="font-display text-3xl font-light text-ink tracking-tight">5</div>

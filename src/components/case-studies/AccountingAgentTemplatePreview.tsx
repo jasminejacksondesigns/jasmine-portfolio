@@ -60,7 +60,7 @@ export default function AccountingAgentTemplatePreview() {
             </div>
             <div>
               <span className="font-subheading text-muted block mb-1">CORE OUTCOME</span>
-              <span className="text-ink">0→1 in 12 Weeks</span>
+              <span className="text-ink">92% Conversation Success</span>
             </div>
           </div>
         </div>
@@ -88,14 +88,14 @@ export default function AccountingAgentTemplatePreview() {
         {/* METRICS ROW */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
-            <div className="font-display text-3xl font-light text-ink tracking-tight">91%</div>
-            <div className="text-xs text-muted">Positive Voice of Customer</div>
-            <p className="text-xs text-muted pt-1">Positive feedback from accountants and SMBs using the launched portal.</p>
+            <div className="font-display text-3xl font-light text-ink tracking-tight">92%</div>
+            <div className="text-xs text-muted">Conversation Success Rate</div>
+            <p className="text-xs text-muted pt-1">Conversations between accountants and clients that resolved successfully.</p>
           </div>
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
-            <div className="font-display text-3xl font-light text-ink tracking-tight">0→1</div>
-            <div className="text-xs text-muted">New Product in 12 Weeks</div>
-            <p className="text-xs text-muted pt-1">From first concept to a shipped, GA product in a compressed timeframe.</p>
+            <div className="font-display text-3xl font-light text-ink tracking-tight">46%</div>
+            <div className="text-xs text-muted">Recommendation Take Rate</div>
+            <p className="text-xs text-muted pt-1">AI recommendations accepted by users inside bank transactions.</p>
           </div>
         </section>
 

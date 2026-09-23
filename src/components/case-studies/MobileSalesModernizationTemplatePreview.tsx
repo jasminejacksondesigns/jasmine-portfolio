@@ -95,7 +95,7 @@ export default function MobileSalesModernizationTemplatePreview() {
         {/* METRICS ROW */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
-            <div className="font-display text-3xl font-light text-ink tracking-tight">6 wks → 2 days</div>
+            <div className="font-display text-3xl font-light text-ink tracking-tight">6 wks → ~2 wks</div>
             <div className="text-xs text-muted">Design-to-Dev Handoff</div>
             <p className="text-xs text-muted pt-1">Handoff timeline collapsed once the shared component library was in place.</p>
           </div>
