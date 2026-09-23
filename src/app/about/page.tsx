@@ -79,9 +79,8 @@ export default function AboutPage() {
               alt={site.name}
               fill
               sizes="(min-width: 768px) 33vw, 100vw"
-              // Zoomed in around her (she stands left of center in the original)
-              // so she sits in the middle of the frame.
-              className="translate-x-[22%] origin-[25%_35%] scale-[1.45] object-cover object-[0%_30%]"
+              quality={95}
+              className="object-cover object-[50%_46%]"
               priority
             />
           </div>

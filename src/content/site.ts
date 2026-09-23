@@ -4,7 +4,7 @@ export const site = {
   heroBlurb:
     "I'm a product designer who roots my ideas in user needs and grows thoughtful, impactful experiences.",
   about: {
-    headshot: "/about/garden/headshot-v5.jpg",
+    headshot: "/about/garden/headshot-v8.jpg",
     heading: "Welcome to my garden!",
     // Intro, split into short beats that read left to right: who I am,
     // how I work, what I've shipped recently.

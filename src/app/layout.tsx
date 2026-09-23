@@ -48,12 +48,12 @@ export const metadata: Metadata = {
     "Jasmine Jackson is a product designer rooting ideas in user needs and growing thoughtful, impactful experiences.",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico?v=3", sizes: "any" },
+      { url: "/icon.png?v=3", type: "image/png", sizes: "512x512" },
     ],
     apple: [
       {
-        url: "/apple-touch-icon.png",
+        url: "/apple-touch-icon.png?v=3",
         sizes: "180x180",
         type: "image/png",
       },
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-hero.jpg",
+        url: "/og-lockup.jpg",
         width: 1200,
         height: 630,
         alt: OG_ALT,
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
       "Jasmine Jackson is a product designer rooting ideas in user needs and growing thoughtful, impactful experiences.",
     images: [
       {
-        url: "/og-hero.jpg",
+        url: "/og-lockup.jpg",
         width: 1200,
         height: 630,
         alt: OG_ALT,
