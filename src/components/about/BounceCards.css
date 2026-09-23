@@ -1,0 +1,31 @@
+/* React Bits <BounceCards />, with class names prefixed so they can't clash
+   with other ".card" styles on the site. */
+.bounce-cards {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bounce-cards__card {
+  position: absolute;
+  width: 200px;
+  aspect-ratio: 1;
+  border: 5px solid #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bounce-cards__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The fan is laid out in fixed px; shrink it as a whole on narrow screens. */
+@media (max-width: 40rem) {
+  .bounce-cards {
+    scale: 0.62;
+  }
+}

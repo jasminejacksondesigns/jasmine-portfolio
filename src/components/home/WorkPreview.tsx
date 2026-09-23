@@ -23,7 +23,8 @@ const accountingAgent = {
   fit: "contain" as const,
   project: bySlug("accounting-agent"),
   requestMoreInfo: true,
-  bg: "bg-[#cfe3f7]",
+  // Pale blue from the hero's description pill.
+  bg: "bg-[#d5e3f6]",
   padded: true,
 };
 
@@ -32,7 +33,8 @@ const mobileSales = {
   aspect: 1.72,
   fit: "contain" as const,
   project: bySlug("mobile-sales-modernization"),
-  bg: "bg-[#c7ecfc]",
+  // Light tint of the hero's olive name pill.
+  bg: "bg-[#e2eac2]",
 };
 
 const invoicing = {
@@ -40,7 +42,8 @@ const invoicing = {
   aspect: 2200 / 3246,
   fit: "contain" as const,
   project: bySlug("invoicing-automation"),
-  bg: "bg-[#aed3ab]",
+  // Sage from the hero's striped flower.
+  bg: "bg-[#c6d1c2]",
   padClass: "p-10 sm:p-16",
 };
 

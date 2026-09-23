@@ -1,4 +1,5 @@
 import React from "react";
+import BrowserFrameVideo from "./BrowserFrameVideo";
 import Image from "next/image";
 import type { CaseStudySection } from "./CaseStudySideNav";
 import CaseStudyShell, { CaseStudyBody } from "./CaseStudyShell";
@@ -77,7 +78,7 @@ export default function AccountingAgentTemplatePreview() {
             </ul>
           </div>
           <div id="solution" className="space-y-3 scroll-mt-32">
-            <h2 className="font-subheading text-xs uppercase tracking-wider text-ink">The Solution</h2>
+            <h2 className="font-subheading text-xs uppercase tracking-wider text-muted">The Solution</h2>
             <p className="text-ink/80 leading-relaxed text-sm">
               An accountant can ask for missing details right from the transaction grid. AI drafts the question, suggests smart reply options based on the category, and keeps a running thread per transaction so nothing gets lost in an inbox.
             </p>
@@ -204,15 +205,13 @@ export default function AccountingAgentTemplatePreview() {
           </div>
 
           <div className="space-y-3">
-            <div className="cs-figure overflow-hidden rounded-xl">
-              <video
-                src="/accounting-agent/aa-final-flow-prototype.mp4"
-                controls
-                playsInline
-                className="w-full"
-              />
-            </div>
-            <p className="text-xs text-muted">Final Flow Prototype.</p>
+            <BrowserFrameVideo
+              src="/accounting-agent/aa-final-flow-prototype.mp4"
+              label="Final flow prototype of the accounting agent"
+              aspect={2484 / 1764}
+              className="mx-auto max-w-2xl"
+            />
+            <p className="text-xs text-muted text-center">Final Flow Prototype.</p>
           </div>
         </section>
 

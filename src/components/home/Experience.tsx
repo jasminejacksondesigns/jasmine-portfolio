@@ -20,9 +20,13 @@ export default function Experience() {
 
           <div className="grid flex-1 grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3">
             {items.map((item, i) => (
+              // Items pop in left to right within each row; each row triggers
+              // on its own as it scrolls into view.
               <Reveal
                 key={item.name}
-                delay={0.03 * i}
+                delay={0.08 * (i % 3)}
+                y={20}
+                scale={0.9}
                 className="flex flex-col items-center gap-3 text-center"
               >
                 <div

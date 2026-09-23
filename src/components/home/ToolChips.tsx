@@ -243,7 +243,7 @@ export default function ToolChips({ items }: { items: ToolItem[] }) {
         createPortal(
           <div
             ref={popoverRef}
-            className="absolute z-[90] w-[240px] -translate-y-full rounded-2xl border border-border bg-white p-4 shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
+            className="absolute z-[90] w-[240px] -translate-y-full rounded-2xl border border-border bg-card p-4 shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
             style={{ top: popover.top, left: popover.left }}
           >
             <button

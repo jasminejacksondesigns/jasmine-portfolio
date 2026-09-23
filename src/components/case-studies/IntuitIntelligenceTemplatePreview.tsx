@@ -1,11 +1,12 @@
 import React from "react";
+import BrowserFrameVideo from "./BrowserFrameVideo";
+import BrowserChrome from "./BrowserChrome";
 import Image from "next/image";
 import type { CaseStudySection } from "./CaseStudySideNav";
 import CaseStudyShell, { CaseStudyBody } from "./CaseStudyShell";
 import { CaseStudyLocked } from "./CaseStudyLock";
 import ScrollPlayVideo from "./ScrollPlayVideo";
 import LaptopFrameVideo from "./LaptopFrameVideo";
-import LaptopFrameImage from "./LaptopFrameImage";
 import DesktopFrameVideo from "./DesktopFrameVideo";
 
 const SECTIONS: CaseStudySection[] = [
@@ -77,7 +78,7 @@ export default function IntuitIntelligenceTemplatePreview() {
             </p>
           </div>
           <div id="solution" className="space-y-3 scroll-mt-32">
-            <h2 className="font-subheading text-xs uppercase tracking-wider text-ink">The Solution</h2>
+            <h2 className="font-subheading text-xs uppercase tracking-wider text-muted">The Solution</h2>
             <p className="text-ink/80 leading-relaxed text-sm">
               Insight prompts built from each customer&rsquo;s real data, showing concrete ways to use Intuit Intelligence as a personal agent rather than a help bot.
             </p>
@@ -122,14 +123,17 @@ export default function IntuitIntelligenceTemplatePreview() {
           </div>
 
           <div className="space-y-3">
-            <div className="cs-figure overflow-hidden">
-              <LaptopFrameImage
-                frameSrc="/intuit-intelligence-homepage/ii-macbook-frame.png"
-                imageSrc="/intuit-intelligence-homepage/ii-v0-beta-desktop.png"
+            <BrowserChrome className="cs-figure mx-auto max-w-2xl">
+              <Image
+                src="/intuit-intelligence-homepage/ii-v0-beta-desktop.png"
                 alt="The current state design of the landing page"
+                width={5760}
+                height={3800}
+                sizes="(min-width: 768px) 672px, 100vw"
+                className="block h-auto w-full"
               />
-            </div>
-            <p className="text-xs text-muted">The current state design of the landing page.</p>
+            </BrowserChrome>
+            <p className="text-xs text-muted text-center">The current state design of the landing page.</p>
           </div>
         </section>
 
@@ -156,47 +160,47 @@ export default function IntuitIntelligenceTemplatePreview() {
           </div>
 
           <div className="space-y-3 pt-2">
-            <h3 className="font-subheading text-lg font-light text-ink tracking-tight">Creating &ldquo;Insight Prompts&rdquo; helped give customers a reason to be invested in the answers</h3>
+            <h3 className="font-display text-lg font-light text-ink tracking-tight">Creating &ldquo;Insight Prompts&rdquo; helped give customers a reason to be invested in the answers</h3>
             <p className="text-ink/80 leading-relaxed text-sm">
               I landed on the idea of &ldquo;Insight Prompts&rdquo;, generated insights that were based on real customer data that were paired with a top asked prompt. It got behind the &ldquo;why&rdquo; of the feature. Customers should care about this feature because it can detect important information about your books or actions needed to take, and provide an answer for how to take that action.
             </p>
           </div>
 
           <div className="space-y-3">
-            <div className="relative aspect-[2400/2134] cs-figure overflow-hidden rounded-xl">
+            <div className="relative aspect-[2400/2134] max-w-2xl mx-auto cs-figure overflow-hidden rounded-xl">
               <Image
                 src="/intuit-intelligence-homepage/ii-insight-prompts-iterations.png"
                 alt="A grid of insight prompt card iterations explored for the Intuit Intelligence panel"
                 fill
-                sizes="(min-width: 768px) 848px, 100vw"
+                sizes="(min-width: 768px) 672px, 100vw"
                 className="object-contain"
               />
             </div>
-            <p className="text-xs text-muted">Iterations on the insight prompt card design.</p>
+            <p className="text-xs text-muted text-center">Iterations on the insight prompt card design.</p>
           </div>
 
           <div className="space-y-3 pt-2">
-            <h3 className="font-subheading text-lg font-light text-ink tracking-tight">Creating the master component for teams to implement the design</h3>
+            <h3 className="font-display text-lg font-light text-ink tracking-tight">Creating the master component for teams to implement the design</h3>
             <p className="text-ink/80 leading-relaxed text-sm">
               Our team was the host of a new AI design system library along with creating new designs. When I complete designs, I add a new master component to the library for other designers and partner teams to use.
             </p>
           </div>
 
           <div className="space-y-3">
-            <div className="relative aspect-[2400/1524] cs-figure overflow-hidden rounded-xl">
+            <div className="relative aspect-[2400/1524] max-w-3xl mx-auto cs-figure overflow-hidden rounded-xl">
               <Image
                 src="/intuit-intelligence-homepage/ii-design-system-library-v2.png"
                 alt="Master components for the zero state and first-time-use panel"
                 fill
-                sizes="(min-width: 768px) 848px, 100vw"
+                sizes="(min-width: 768px) 768px, 100vw"
                 className="object-contain"
               />
             </div>
-            <p className="text-xs text-muted">The zero-state and FTU master components, added to the design system.</p>
+            <p className="text-xs text-muted text-center">The zero-state and FTU master components, added to the design system.</p>
           </div>
 
           <div className="space-y-3 pt-2">
-            <h3 className="font-subheading text-lg font-light text-ink tracking-tight">After initial release, I decided to push it further to show the breadth of questions that can be answered</h3>
+            <h3 className="font-display text-lg font-light text-ink tracking-tight">After initial release, I decided to push it further to show the breadth of questions that can be answered</h3>
             <p className="text-ink/80 leading-relaxed text-sm">
               After launch, customers said they still weren&rsquo;t fully confident in understanding the breadth of what Intuit Intelligence could do. I ran an A/B test comparing the live design against a new concept. In the end, customers loved having more options and wanted a combination of both: clickable chips that showed the breadth of prompt areas, with different insight prompts under each one.
             </p>
@@ -216,16 +220,16 @@ export default function IntuitIntelligenceTemplatePreview() {
           </div>
 
           <div className="space-y-3">
-            <div className="relative aspect-[2400/1556] cs-figure overflow-hidden rounded-xl">
+            <div className="relative aspect-[2400/1556] max-w-2xl mx-auto cs-figure overflow-hidden rounded-xl">
               <Image
                 src="/intuit-intelligence-homepage/ii-ab-test-v2.png"
                 alt="A/B test: chips showing the breadth of prompt areas"
                 fill
-                sizes="(min-width: 768px) 848px, 100vw"
+                sizes="(min-width: 768px) 672px, 100vw"
                 className="object-contain"
               />
             </div>
-            <p className="text-xs text-muted">A/B test: chips showing the breadth of prompt areas.</p>
+            <p className="text-xs text-muted text-center">A/B test: chips showing the breadth of prompt areas.</p>
           </div>
 
           <div className="space-y-3 pt-2">
@@ -235,14 +239,12 @@ export default function IntuitIntelligenceTemplatePreview() {
           </div>
 
           <div className="space-y-3">
-            <div className="cs-figure overflow-hidden rounded-xl bg-panel">
-              <ScrollPlayVideo
-                src="/intuit-intelligence-homepage/vibecoded-exploration.mp4"
-                loop
-                controls={false}
-                className="w-full h-auto"
-              />
-            </div>
+            <BrowserFrameVideo
+              src="/intuit-intelligence-homepage/vibecoded-exploration.mp4"
+              label="Figma Make prototype of the chip and insight prompt designs"
+              aspect={3004 / 1588}
+              className="cs-figure"
+            />
             <p className="text-xs text-muted">Figma Make of the chip and insight prompt designs.</p>
           </div>
         </section>

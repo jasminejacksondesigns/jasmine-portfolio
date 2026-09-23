@@ -12,13 +12,20 @@ const links = [
 
 export default function Nav() {
   const pathname = usePathname();
+  // On the homepage the nav waits for the hero intro; the hero reveals
+  // it. Hidden from first render so it never flashes in before the intro.
+  const waitForBloom = pathname === "/";
 
   return (
-    <header className="w-full border-b border-border bg-bg">
-      <div className="mx-auto flex max-w-[1680px] items-center justify-between gap-4 px-4 py-5 sm:px-6 sm:py-6">
+    <header
+      data-site-nav
+      data-wait-bloom={waitForBloom || undefined}
+      className="font-nav sticky top-0 z-[100] w-full overflow-hidden border-b border-border bg-bg"
+    >
+      <div className="mx-auto flex max-w-[1680px] items-center justify-between gap-4 px-4 py-3 sm:px-6 sm:py-3.5">
         <Link
           href="/"
-          className="font-subheading truncate text-base font-medium tracking-[0.08em] text-ink uppercase sm:text-lg"
+          className="truncate text-xs font-medium tracking-[0.08em] text-ink uppercase sm:text-sm"
         >
           {site.name}
         </Link>
@@ -31,7 +38,7 @@ export default function Nav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm transition-colors ${
+                className={`text-[13px] transition-colors ${
                   isActive ? "text-ink" : "text-muted hover:text-ink"
                 }`}
               >

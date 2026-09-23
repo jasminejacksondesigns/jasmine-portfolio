@@ -57,11 +57,15 @@
   --color-dark-ink: var(--color-dark-ink);
   --color-dark-muted: var(--color-dark-muted);
   --color-dark-border: var(--color-dark-border);
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-poppins);
-  --font-subheading: var(--font-red-hat-display);
-  --font-hero: var(--font-inter);
-  --font-mono: var(--font-anonymous-pro);
+  --font-sans: var(--font-jakarta);
+  --font-display: var(--font-jakarta);
+  --font-subheading: var(--font-reddit-mono);
+  --font-hero: var(--font-jakarta);
+  --font-mono: var(--font-reddit-mono);
+  --font-name: var(--font-jakarta);
+  --font-nav: var(--font-reddit-sans);
+  --font-heading: var(--font-silkscreen);
+  --font-body: var(--font-reddit-mono);
 
   --color-app-surface: var(--color-app-surface);
   --color-app-line: var(--color-app-line);
@@ -81,6 +85,51 @@
   --color-footer-muted: var(--color-footer-muted);
 }
 
+/* Type system: Plus Jakarta Sans + Reddit Mono. Tailwind size/weight classes
+   on an element still win over these defaults. */
+:root {
+  --text-hero: 700 4rem/1.05 var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --text-h1: 600 2.25rem/1.15 var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --text-h2: 600 1.375rem/1.25 var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --text-body: 400 0.9375rem/1.55 var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --text-meta: 500 0.75rem/1 var(--font-reddit-mono), monospace;
+}
+
+@layer base {
+  h1 {
+    font: var(--text-h1);
+  }
+  h2 {
+    font: var(--text-h2);
+  }
+  p {
+    font: var(--text-body);
+  }
+}
+
+@layer components {
+  .hero-title {
+    font: var(--text-hero);
+    letter-spacing: -0.03em;
+  }
+  .meta-tag {
+    font: var(--text-meta);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+}
+
+/* Rendered height of the sticky nav (padding + one line + border). The home
+   hero reads it to center itself on the full screen behind the nav. */
+:root {
+  --nav-h: 2.78125rem;
+}
+@media (min-width: 40rem) {
+  :root {
+    --nav-h: 3.0625rem;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -88,6 +137,39 @@ html {
 body {
   background: var(--color-bg);
   color: var(--color-ink);
+}
+
+/* Homepage: nav stays hidden until BloomHero slides it in. An attribute
+   (not an inline style) so GSAP's cleanup can't leave it hidden elsewhere. */
+[data-site-nav][data-wait-bloom] {
+  visibility: hidden;
+}
+
+html[data-work-gallery] [data-site-nav] {
+  pointer-events: none;
+}
+
+html {
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html[data-custom-cursor],
+  html[data-custom-cursor] * {
+    cursor: none !important;
+  }
+}
+
+.work-media {
+  transform: scale(1);
+  transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .group:hover .work-media {
+    transform: scale(1.06);
+  }
 }
 
 .section-anchor {

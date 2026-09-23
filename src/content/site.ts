@@ -4,11 +4,14 @@ export const site = {
   heroBlurb:
     "I'm a product designer who roots my ideas in user needs and grows thoughtful, impactful experiences.",
   about: {
-    headshot: "/about/garden/headshot-v4.jpg",
+    headshot: "/about/garden/headshot-v5.jpg",
     heading: "Welcome to my garden!",
+    // Intro, split into short beats that read left to right: who I am,
+    // how I work, what I've shipped recently.
     paragraphs: [
-      "I am a San Francisco-based Product Designer with a background in product management, giving me a unique edge in bridging business strategy with user experience. That PM mindset shapes how I evaluate customer needs, align business goals, and prioritize feature roadmaps before diving into execution. I thrive on difficult problem spaces, often borrowing interaction patterns from unrelated apps and industries to find inventive solutions.",
-      "My work focuses on turning intricate systems into simple, intuitive interactions. Most recently, I designed conversational AI experiences for Intuit Intelligence, crafting end-to-end workflows for reasoning models, file inputs, contextual sources, and creating insight prompts. Comfortable building directly with AI tools and modern prototyping workflows, I rapidly iterate to turn exploratory concepts into scalable design patterns and dynamic UI states.",
+      "I’m a San Francisco-based product designer who started out in product management. That background shapes everything I make: I bridge business strategy and user experience to turn complex systems into simple, intuitive interactions.",
+      "No matter where a project starts, whether it’s a vibe-coded demo or a stack of customer feedback, I take that raw material and shape it into designs that actually solve customer needs, often borrowing ideas from unrelated apps and industries along the way.",
+      "Most recently at Intuit Intelligence, I designed end-to-end conversational AI experiences, from reasoning models and file inputs to contextual sources and insight prompts. I build directly with AI tools and rapid prototypes, so exploratory concepts become scalable design patterns quickly.",
       "Outside of digital screens, I am passionate about health, architecture, nature, and creative tech. You can usually find me crafting hands-on DIY home decor, hiking, practicing yoga, or training for my next half marathon around the Bay.",
     ],
     photos: [
@@ -19,7 +22,6 @@ export const site = {
       { src: "/about/garden/img-5432.jpg", aspect: 398 / 531 },
       { src: "/about/garden/img-2957.jpg", aspect: 398 / 530 },
       { src: "/about/garden/img-4648.jpg", aspect: 394 / 430 },
-      { src: "/about/garden/img-6542.jpg", aspect: 396 / 267 },
       { src: "/about/garden/img-4868.jpg", aspect: 349 / 466 },
       { src: "/about/garden/img-5047.jpg", aspect: 348 / 348 },
       { src: "/about/garden/img-0034.jpg", aspect: 349 / 465 },

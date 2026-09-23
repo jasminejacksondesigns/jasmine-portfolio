@@ -78,7 +78,7 @@ export default function HomingTemplatePreview() {
             </p>
           </div>
           <div id="solution" className="space-y-3 scroll-mt-32">
-            <h2 className="font-subheading text-xs uppercase tracking-wider text-ink">The Solution</h2>
+            <h2 className="font-subheading text-xs uppercase tracking-wider text-muted">The Solution</h2>
             <p className="text-ink/80 leading-relaxed text-sm">
               Homing lets you drop a photo, a view, a snack, a little treasure, and turns it into a fridge magnet you can send, built as a partner project in a single make-a-thon sprint.
             </p>
@@ -106,13 +106,13 @@ export default function HomingTemplatePreview() {
             <h2 className="font-display text-2xl font-light text-ink tracking-tight">Scope, Build, Ship. Same Day</h2>
           </div>
 
-          <div className="p-6 rounded-xl border border-border bg-panel/40 space-y-6">
+          <div className="p-6 rounded-xl border border-border space-y-6">
             <div className="flex flex-col md:flex-row items-stretch justify-between gap-4">
 
               {/* Step 1 */}
               <div className="flex-1 p-4 rounded-lg bg-bg border border-border space-y-3">
                 <span className="text-[10px] text-muted">SCOPE</span>
-                <h3 className="font-subheading font-light text-sm text-ink">Shipping the Slice</h3>
+                <h3 className="font-display font-light text-sm text-ink">Shipping the Slice</h3>
                 <p className="text-xs text-muted">Scoped to one clear job: upload or capture a photo, and get a magnet-ready keepsake flow.</p>
               </div>
 
@@ -122,10 +122,10 @@ export default function HomingTemplatePreview() {
               </div>
 
               {/* Step 2 (Highlighted) */}
-              <div className="flex-1 p-4 rounded-lg bg-panel border border-border space-y-3 relative">
-                <span className="text-[10px] text-ink">BUILD</span>
-                <h3 className="font-subheading font-light text-sm text-ink">Designing With Agents Only</h3>
-                <p className="text-xs text-ink/75">Every design move went through agents. The constraint forced sharper product decisions and a faster loop from idea to shippable UI.</p>
+              <div className="flex-1 p-4 rounded-lg bg-bg border border-border space-y-3 relative">
+                <span className="text-[10px] text-muted">BUILD</span>
+                <h3 className="font-display font-light text-sm text-ink">Designing With Agents Only</h3>
+                <p className="text-xs text-muted">Every design move went through agents. The constraint forced sharper product decisions and a faster loop from idea to shippable UI.</p>
               </div>
 
               {/* Arrow 2 */}
@@ -136,7 +136,7 @@ export default function HomingTemplatePreview() {
               {/* Step 3 */}
               <div className="flex-1 p-4 rounded-lg bg-bg border border-border space-y-3">
                 <span className="text-[10px] text-muted">SHIP</span>
-                <h3 className="font-subheading font-light text-sm text-ink">Demo Night</h3>
+                <h3 className="font-display font-light text-sm text-ink">Demo Night</h3>
                 <p className="text-xs text-muted">Presented the finished flow to the SF Make-a-thon cohort the same day it was scoped.</p>
               </div>
 

@@ -1,48 +1,45 @@
 import type { Metadata } from "next";
-import { Inter, Anonymous_Pro } from "next/font/google";
-import localFont from "next/font/local";
+import {
+  Silkscreen,
+  Plus_Jakarta_Sans,
+  Reddit_Mono,
+  Reddit_Sans,
+} from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import CustomCursor from "@/components/CustomCursor";
 import ContactSection from "@/components/home/ContactSection";
 
-const inter = Inter({
-  variable: "--font-inter",
+// Site-wide type system: Plus Jakarta Sans for headings and body, Reddit
+// Mono for metadata labels.
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+});
+
+// Home hero type: Silkscreen (pixel display) for the name, Reddit Mono
+// for the description.
+const silkscreen = Silkscreen({
+  variable: "--font-silkscreen",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const redditMono = Reddit_Mono({
+  variable: "--font-reddit-mono",
   subsets: ["latin"],
 });
 
-const anonymousPro = Anonymous_Pro({
-  variable: "--font-anonymous-pro",
+// Top nav.
+const redditSans = Reddit_Sans({
+  variable: "--font-reddit-sans",
   subsets: ["latin"],
-  weight: ["400", "700"],
-});
-
-const poppins = localFont({
-  src: [
-    {
-      path: "./fonts/poppins/Poppins-Light.ttf",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "./fonts/poppins/Poppins-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-  ],
-  variable: "--font-poppins",
-  display: "swap",
-});
-
-const redHatDisplay = localFont({
-  src: "./fonts/red-hat-display/RedHatDisplay-VariableFont_wght.ttf",
-  variable: "--font-red-hat-display",
-  display: "swap",
-  weight: "300 900",
 });
 
 const SITE_URL = "https://jasminejackson.design";
 const OG_ALT =
-  "Illustrated cream flower with green leaves, Jasmine Jackson’s portfolio mark.";
+  "Two illustrated flowers around pill-shaped stickers reading “I’m Jasmine Jackson” and “designer and builder rooted in user needs, growing impactful experiences.”";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -71,9 +68,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og.jpg",
+        url: "/og-hero.jpg",
         width: 1200,
-        height: 1200,
+        height: 630,
         alt: OG_ALT,
         type: "image/jpeg",
       },
@@ -86,9 +83,9 @@ export const metadata: Metadata = {
       "Jasmine Jackson is a product designer rooting ideas in user needs and growing thoughtful, impactful experiences.",
     images: [
       {
-        url: "/og.jpg",
+        url: "/og-hero.jpg",
         width: 1200,
-        height: 1200,
+        height: 630,
         alt: OG_ALT,
       },
     ],
@@ -100,9 +97,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${inter.variable} ${poppins.variable} ${redHatDisplay.variable} ${anonymousPro.variable} h-full antialiased`}
+      className={`${jakarta.variable} ${silkscreen.variable} ${redditMono.variable} ${redditSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-bg text-ink font-sans font-light">
+      <body className="min-h-full flex flex-col bg-bg text-ink font-sans font-normal">
+        <CustomCursor />
         <Nav />
         <main className="flex-1">{children}</main>
         <ContactSection />
