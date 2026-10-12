@@ -90,12 +90,10 @@ export default function IntuitIntelligenceTemplatePreview() {
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
             <div className="font-display text-3xl font-light text-ink tracking-tight">6% → 17%</div>
             <div className="text-xs text-muted">Projected Adoption</div>
-            <p className="text-xs text-muted pt-1">Projected lift in adoption and conversation quality from the redesigned first-time experience.</p>
           </div>
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
             <div className="font-display text-3xl font-light text-ink tracking-tight">5</div>
             <div className="text-xs text-muted">Partner Teams</div>
-            <p className="text-xs text-muted pt-1">Partner teams across QuickBooks Online that created insight prompts on the new framework.</p>
           </div>
         </section>
 
