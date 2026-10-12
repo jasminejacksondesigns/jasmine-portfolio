@@ -97,12 +97,10 @@ export default function InvoicingAutomationTemplatePreview() {
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
             <div className="font-display text-3xl font-light text-ink tracking-tight">232K+</div>
             <div className="text-xs text-muted">Views</div>
-            <p className="text-xs text-muted pt-1">Views across invoice and estimate autofill after both launched GA in Nov 2024.</p>
           </div>
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
             <div className="font-display text-3xl font-light text-ink tracking-tight">69.5%</div>
             <div className="text-xs text-muted">Completion Rate</div>
-            <p className="text-xs text-muted pt-1">Completion rate across QuickBooks&rsquo; first AI-powered mobile features.</p>
           </div>
         </section>
 

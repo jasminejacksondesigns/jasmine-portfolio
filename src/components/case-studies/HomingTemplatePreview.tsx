@@ -90,12 +90,10 @@ export default function HomingTemplatePreview() {
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
             <div className="font-display text-3xl font-light text-ink tracking-tight">2 hrs</div>
             <div className="text-xs text-muted">Idea to Working Product</div>
-            <p className="text-xs text-muted pt-1">From scoping the idea to a working, demo-ready product.</p>
           </div>
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
             <div className="font-display text-3xl font-light text-ink tracking-tight">100%</div>
             <div className="text-xs text-muted">AI-Native Design</div>
-            <p className="text-xs text-muted pt-1">Every design move went through agents, no traditional Figma craft pass.</p>
           </div>
         </section>
 

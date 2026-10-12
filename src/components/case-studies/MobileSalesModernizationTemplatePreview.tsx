@@ -97,12 +97,10 @@ export default function MobileSalesModernizationTemplatePreview() {
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
             <div className="font-display text-3xl font-light text-ink tracking-tight">6 wks → ~2 wks</div>
             <div className="text-xs text-muted">Design-to-Dev Handoff</div>
-            <p className="text-xs text-muted pt-1">Handoff timeline collapsed once the shared component library was in place.</p>
           </div>
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
             <div className="font-display text-3xl font-light text-ink tracking-tight">80%</div>
             <div className="text-xs text-muted">Fewer Regressions</div>
-            <p className="text-xs text-muted pt-1">Fewer regressions on high-traffic pages after the shared library rollout.</p>
           </div>
         </section>
 

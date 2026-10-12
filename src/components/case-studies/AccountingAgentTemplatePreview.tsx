@@ -10,9 +10,52 @@ const SECTIONS: CaseStudySection[] = [
   { id: "problem", label: "Problem" },
   { id: "solution", label: "Solution" },
   { id: "process-artifacts", label: "Process Artifacts" },
+  { id: "process", label: "Process" },
   { id: "ai-guidance", label: "AI Guidance" },
   { id: "final-design", label: "Final Design" },
   { id: "takeaways", label: "Takeaways" },
+];
+
+const PROCESS_STEPS = [
+  "Started with a design provocation shared with 15 accountants",
+  "A competitive analysis transformed how I looked at the layout",
+  "Designed to the ideal state first, then narrowed with partners for the email flow",
+  "Shipped the email flow in a one-week sprint",
+];
+
+type ProcessFigure = { src: string; width: number; height: number; label: string; laptop?: boolean };
+
+// One group per process slide in the presentation, with the slide's own title and labels.
+const PROCESS_GROUPS: { title?: string; figures: ProcessFigure[] }[] = [
+  {
+    title: "Before",
+    figures: [
+      { src: "/accounting-agent/aa-process-before-accountant.png", width: 2400, height: 1707, label: "Accountant Side" },
+      { src: "/accounting-agent/aa-process-before-client.png", width: 2400, height: 1707, label: "Client Side" },
+    ],
+  },
+  {
+    title: "A few iterations I went through",
+    figures: [
+      { src: "/accounting-agent/aa-process-layout-thread-below.png", width: 1440, height: 1024, label: "Thread below the table" },
+      { src: "/accounting-agent/aa-process-layout-thread-panel.png", width: 2400, height: 1707, label: "Thread fixed in a panel beside the table" },
+      { src: "/accounting-agent/aa-process-layout-resizable-panel.png", width: 2400, height: 1710, label: "Table + resizable thread panel" },
+    ],
+  },
+  {
+    title: "Portal Layout Refinement",
+    figures: [
+      { src: "/accounting-agent/aa-process-refine-before.png", width: 2400, height: 1561, label: "Before", laptop: true },
+      { src: "/accounting-agent/aa-process-refine-after.png", width: 2400, height: 1561, label: "After", laptop: true },
+    ],
+  },
+  {
+    title: "Pushing for a better email design",
+    figures: [
+      { src: "/accounting-agent/aa-process-email-narrowed.png", width: 2400, height: 1561, label: "Narrowed Scope", laptop: true },
+      { src: "/accounting-agent/aa-process-email-preview.png", width: 2400, height: 1561, label: "Design with Preview", laptop: true },
+    ],
+  },
 ];
 
 export default function AccountingAgentTemplatePreview() {
@@ -90,12 +133,10 @@ export default function AccountingAgentTemplatePreview() {
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
             <div className="font-display text-3xl font-light text-ink tracking-tight">92%</div>
             <div className="text-xs text-muted">Conversation Success Rate</div>
-            <p className="text-xs text-muted pt-1">Conversations between accountants and clients that resolved successfully.</p>
           </div>
           <div className="cs-metric p-5 rounded-xl bg-panel border border-border space-y-1">
             <div className="font-display text-3xl font-light text-ink tracking-tight">46%</div>
             <div className="text-xs text-muted">Recommendation Take Rate</div>
-            <p className="text-xs text-muted pt-1">AI recommendations accepted by users inside bank transactions.</p>
           </div>
         </section>
 
@@ -147,6 +188,64 @@ export default function AccountingAgentTemplatePreview() {
               <p className="text-sm text-ink/80 italic">&ldquo;Pills are too generic, they may be doing more harm than good.&rdquo;</p>
               <p className="mt-2 text-xs text-muted">Beta feedback on the category-suggestion UI</p>
             </blockquote>
+          </div>
+        </section>
+
+        {/* PROCESS STEPS */}
+        <section id="process" className="space-y-8 pt-10 border-t border-border scroll-mt-32">
+          <div className="space-y-3">
+            <span className="font-subheading text-xs text-muted uppercase tracking-wider">Accountant Portal</span>
+            <h2 className="font-display text-2xl font-light text-ink tracking-tight">A few key parts of the process</h2>
+          </div>
+
+          <ol className="border-t border-border">
+            {PROCESS_STEPS.map((step, i) => (
+              <li key={step} className="flex items-baseline gap-6 md:gap-10 py-4 border-b border-border">
+                <span className="font-subheading text-xs text-muted tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+                <span className="text-sm text-ink/80 leading-relaxed">{step}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {PROCESS_GROUPS.map((group) => (
+          <section key={group.figures[0].src} className="space-y-6 pt-10 border-t border-border">
+            {group.title && (
+              <h3 className="font-display text-2xl font-light text-ink tracking-tight">{group.title}</h3>
+            )}
+            <div className={`grid grid-cols-1 gap-4 ${group.figures.length === 3 ? "md:grid-cols-3" : "md:grid-cols-2"}`}>
+              {group.figures.map((fig) => (
+                <figure key={fig.src} className="space-y-3">
+                  <div
+                    className={`relative cs-figure overflow-hidden ${fig.laptop ? "" : "rounded-xl bg-panel border border-border"}`}
+                    style={{ aspectRatio: `${fig.width} / ${fig.height}` }}
+                  >
+                    <Image
+                      src={fig.src}
+                      alt={group.title ? `${group.title}: ${fig.label}` : fig.label}
+                      fill
+                      sizes="(min-width: 768px) 448px, 100vw"
+                      unoptimized
+                      className="object-contain"
+                    />
+                  </div>
+                  <figcaption className="text-sm text-ink">{fig.label}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+        ))}
+
+        <section className="space-y-6 pt-10 border-t border-border">
+          <h3 className="font-display text-2xl font-light text-ink tracking-tight">Shipped the email flow in a one-week sprint</h3>
+          <div className="space-y-3">
+            <BrowserFrameVideo
+              src="/accounting-agent/aa-shipped-email-flow.mp4"
+              label="The shipped Send requests email flow with a live email preview"
+              aspect={1516 / 1076}
+              className="mx-auto max-w-2xl"
+            />
+            <p className="text-xs text-muted text-center">Shipped Email Flow.</p>
           </div>
         </section>
 
